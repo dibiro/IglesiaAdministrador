@@ -6,42 +6,54 @@ Buscar Versiculo
 {% block content %}
 
   <div class="row" >
-    <div class="col-md-12">
-      <div class="form-group col-md-3">
-        <label>Libro</label>
-        <select class="form-control" name="libro" id="libro">
-          {% for x in libros %}
-            <option value="{{x.id}}" data-capitulos="{{x.capitulos}}">{{x.nombre}}</option>
-          {% endfor %}
-        </select>
+    <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group col-xs-6">
+          <label class="col-sm-4 col-xs-12">Libro</label>
+          <div class="col-sm-8 col-xs-12">
+            <select style="width:100%" class="form-control" name="libro" id="libro">
+              {% for x in libros %}
+                <option value="{{x.id}}" data-capitulos="{{x.capitulos}}">{{x.nombre}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="form-group col-xs-6">
+          <label class="col-sm-4 col-xs-12">Capitulo</label>
+          <div class="col-sm-8 col-xs-12">
+            <select style="width:100%" class="form-control" name="capitulo" id="capitulo">
+              {% for x in lista %}
+                <option value="{{x}}">{{x}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
       </div>
-      <div class="form-group col-md-3">
-        <label>Capitulo</label>
-        <select class="form-control" name="capitulo" id="capitulo">
-          {% for x in lista %}
-            <option value="{{x}}">{{x}}</option>
-          {% endfor %}
-        </select>
+      <div class="col-xs-12 col-sm-6">
+        <div class="form-group col-xs-6">
+          <label class="col-sm-4 col-xs-12">Desde</label>
+          <div class="col-sm-8 col-xs-12">
+            <select style="width:100%" class="form-control" name="Desde" id="Desde">
+              {% for x in lista_versiculos %}
+                <option value="{{x}}">{{x}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="form-group col-xs-6">
+          <label class="col-sm-4 col-xs-12">Hasta</label>
+          <div class="col-sm-8 col-xs-12">
+            <select style="width:100%" class="form-control" name="Hasta" id="Hasta">
+              {% for x in lista_versiculos %}
+                <option value="{{x}}">{{x}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
       </div>
-      <div class="form-group col-md-3">
-        <label>Desde</label>
-        <select class="form-control" name="Desde" id="Desde">
-          {% for x in lista_versiculos %}
-            <option value="{{x}}">{{x}}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="form-group col-md-3">
-        <label>Hasta</label>
-        <select class="form-control" name="Hasta" id="Hasta">
-          {% for x in lista_versiculos %}
-            <option value="{{x}}">{{x}}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="btn btn-info btn-lg btn-block col-md-12" id="filtrar" >Filtrar</div>
+      <div class="btn btn-info btn-lg btn-block col-xs-12" id="filtrar" >Filtrar</div>
     </div>
-    <div class="col-md-12" id="contenedor">
+    <div class="col-s-12" id="contenedor">
       <ul class="list-group" id="contenido">
         {% for x in genesis %}
           <li class="list-group-item">
