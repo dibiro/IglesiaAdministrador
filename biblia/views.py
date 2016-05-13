@@ -75,3 +75,17 @@ def buscar_versiculos_por_filtrado(request):
         dicc = {}
     result = json.dumps(lista_versiculos, ensure_ascii=False)
     return HttpResponse(result, content_type='application/json; charset=utf-8')
+
+
+def calcular_capitulos(request):
+    libros = Libros.objects.all()
+    for x in libros:
+        capitulo = Versiculos.objects.filter(libro=x).order_by('capitulo')
+        aux = 0
+        for y in capitulo:
+            if y.capitulo > aux:
+                aux = y.capitulo
+        x.capitulos = aux
+        x.save()
+    result = json.dumps('listo', ensure_ascii=False)
+    return HttpResponse(result, content_type='application/json; charset=utf-8')

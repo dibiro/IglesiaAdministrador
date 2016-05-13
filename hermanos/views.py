@@ -9,40 +9,7 @@ from .models import *
 import json
 from django.conf import settings as _settings
 from django.contrib.auth import login, logout, authenticate
-from django.utils.module_loading import import_by_path
 from django.core.mail import get_connection, send_mail, BadHeaderError
-
-
-def login_view(request):
-    logout(request)
-    username = password = ''
-    next = ""
-    redirect_to = getattr(_settings, 'LOGIN_REDIRECT_URL', None)
-    if request.GET:
-        next = request.GET['next']
-    if request.POST:
-        username = request.POST['username']
-        password = request.POST['password']
-        auth_backend = import_by_path('django.contrib.auth.backends.ModelBackend')()
-        user = auth_backend.authenticate(username=username, password=password)
-        if user is not None:
-            if user.is_active:
-                user.backend = "%s.%s" % (import_by_path('django.contrib.auth.backends.ModelBackend')().__module__, import_by_path('django.contrib.auth.backends.ModelBackend')().__class__.__name__)
-                login(request, user)
-                if next == "":
-                    return HttpResponseRedirect('/')
-                else:
-                    return HttpResponseRedirect(next)
-        else:
-            return HttpResponseRedirect('/')
-    return render_to_response(
-        'login.html',
-        {
-            'username': username,
-            'next': next,
-        },
-        context_instance=RequestContext(request)
-    )
 
 
 def logout_view(request):
@@ -51,10 +18,10 @@ def logout_view(request):
 
 
 class Index(TemplateView):
-    template_name = "index.html"
+    template_name = "hermanos.html"
 
     def get(self, request, *args, **kwargs):
-        Hermanos = Hermanos.objects.all()
+        hermanos = Hermanos.objects.all()
         return render_to_response(self.template_name, locals(), context_instance=RequestContext(request))
 
 
@@ -327,3 +294,4 @@ def create_user(request):
         )
         bitacora.save()
     return HttpResponse(json.dumps(dicc, ensure_ascii=False), content_type='application/json; charset=utf-8')
+

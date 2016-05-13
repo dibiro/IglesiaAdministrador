@@ -1,0 +1,61 @@
+{% extends "princ.html"%}
+{% block title %}
+Buscar Versiculo
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+  <div class="row" >
+    <div class="col-md-12">
+      <div class="form-group col-md-3">
+        <label>Libro</label>
+        <select class="form-control" name="libro" id="libro">
+          {% for x in libros %}
+            <option value="{{x.id}}" data-capitulos="{{x.capitulos}}">{{x.nombre}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group col-md-3">
+        <label>Capitulo</label>
+        <select class="form-control" name="capitulo" id="capitulo">
+          {% for x in lista %}
+            <option value="{{x}}">{{x}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group col-md-3">
+        <label>Desde</label>
+        <select class="form-control" name="Desde" id="Desde">
+          {% for x in lista_versiculos %}
+            <option value="{{x}}">{{x}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group col-md-3">
+        <label>Hasta</label>
+        <select class="form-control" name="Hasta" id="Hasta">
+          {% for x in lista_versiculos %}
+            <option value="{{x}}">{{x}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="btn btn-info btn-lg btn-block col-md-12" id="filtrar" >Filtrar</div>
+    </div>
+    <div class="col-md-12" id="contenedor">
+      <ul class="list-group" id="contenido">
+        {% for x in genesis %}
+          <li class="list-group-item">
+            <span class="badge">{{x.versiculo}}</span>
+            {{x.texto}}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+
+
+{% endblock %}
+{% block js %}
+  <script type="text/javascript" src="{% static 'js/BuscarVersiculo.js' %}"></script>
+{% endblock %}

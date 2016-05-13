@@ -64,6 +64,7 @@ class Hermanos(models.Model):
     sexo = models.CharField(max_length=2, choices=SEX_CHOICES, blank=True, null=True)
     fecha_de_nacimiento = models.DateField(blank=True, null=True)
     ministerio = models.ForeignKey(Ministerios,  blank=True, null=True)
+    user = models.OneToOneField(User)
 
     def get_sex(self):
         if self.sexo == '1':
