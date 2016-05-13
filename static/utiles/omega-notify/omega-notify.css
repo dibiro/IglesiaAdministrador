@@ -1,0 +1,6254 @@
+.o-progress-container {
+  overflow: hidden;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-align: center;
+}
+.o-progress-circular-0 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.o-progress-circular-0:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-0:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #009;
+}
+.o-progress-circular-0:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(0deg);
+  -ms-transform: scale(1.05, 1.05) rotate(0deg);
+  transform: scale(1.05, 1.05) rotate(0deg);
+}
+.o-progress-circular-1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(1.8deg);
+  -ms-transform: rotate(1.8deg);
+  transform: rotate(1.8deg);
+}
+.o-progress-circular-1:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-1:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-1.8deg);
+  -ms-transform: rotate(-1.8deg);
+  transform: rotate(-1.8deg);
+  color: #009;
+}
+.o-progress-circular-1:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-1.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-1.8deg);
+  transform: scale(1.05, 1.05) rotate(-1.8deg);
+}
+.o-progress-circular-2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(3.6deg);
+  -ms-transform: rotate(3.6deg);
+  transform: rotate(3.6deg);
+}
+.o-progress-circular-2:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-2:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-3.6deg);
+  -ms-transform: rotate(-3.6deg);
+  transform: rotate(-3.6deg);
+  color: #009;
+}
+.o-progress-circular-2:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-3.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-3.6deg);
+  transform: scale(1.05, 1.05) rotate(-3.6deg);
+}
+.o-progress-circular-3 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(5.399999999999999deg);
+  -ms-transform: rotate(5.399999999999999deg);
+  transform: rotate(5.399999999999999deg);
+}
+.o-progress-circular-3:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-3:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-5.399999999999999deg);
+  -ms-transform: rotate(-5.399999999999999deg);
+  transform: rotate(-5.399999999999999deg);
+  color: #009;
+}
+.o-progress-circular-3:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-5.399999999999999deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-5.399999999999999deg);
+  transform: scale(1.05, 1.05) rotate(-5.399999999999999deg);
+}
+.o-progress-circular-4 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(7.2deg);
+  -ms-transform: rotate(7.2deg);
+  transform: rotate(7.2deg);
+}
+.o-progress-circular-4:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-4:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-7.2deg);
+  -ms-transform: rotate(-7.2deg);
+  transform: rotate(-7.2deg);
+  color: #009;
+}
+.o-progress-circular-4:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-7.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-7.2deg);
+  transform: scale(1.05, 1.05) rotate(-7.2deg);
+}
+.o-progress-circular-5 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(9deg);
+  -ms-transform: rotate(9deg);
+  transform: rotate(9deg);
+}
+.o-progress-circular-5:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-5:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+  color: #009;
+}
+.o-progress-circular-5:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-9deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-9deg);
+  transform: scale(1.05, 1.05) rotate(-9deg);
+}
+.o-progress-circular-6 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(10.799999999999999deg);
+  -ms-transform: rotate(10.799999999999999deg);
+  transform: rotate(10.799999999999999deg);
+}
+.o-progress-circular-6:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-6:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-10.799999999999999deg);
+  -ms-transform: rotate(-10.799999999999999deg);
+  transform: rotate(-10.799999999999999deg);
+  color: #009;
+}
+.o-progress-circular-6:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-10.799999999999999deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-10.799999999999999deg);
+  transform: scale(1.05, 1.05) rotate(-10.799999999999999deg);
+}
+.o-progress-circular-7 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(12.600000000000001deg);
+  -ms-transform: rotate(12.600000000000001deg);
+  transform: rotate(12.600000000000001deg);
+}
+.o-progress-circular-7:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-7:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-12.600000000000001deg);
+  -ms-transform: rotate(-12.600000000000001deg);
+  transform: rotate(-12.600000000000001deg);
+  color: #009;
+}
+.o-progress-circular-7:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-12.600000000000001deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-12.600000000000001deg);
+  transform: scale(1.05, 1.05) rotate(-12.600000000000001deg);
+}
+.o-progress-circular-8 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(14.4deg);
+  -ms-transform: rotate(14.4deg);
+  transform: rotate(14.4deg);
+}
+.o-progress-circular-8:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-8:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-14.4deg);
+  -ms-transform: rotate(-14.4deg);
+  transform: rotate(-14.4deg);
+  color: #009;
+}
+.o-progress-circular-8:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-14.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-14.4deg);
+  transform: scale(1.05, 1.05) rotate(-14.4deg);
+}
+.o-progress-circular-9 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(16.2deg);
+  -ms-transform: rotate(16.2deg);
+  transform: rotate(16.2deg);
+}
+.o-progress-circular-9:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-9:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-16.2deg);
+  -ms-transform: rotate(-16.2deg);
+  transform: rotate(-16.2deg);
+  color: #009;
+}
+.o-progress-circular-9:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-16.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-16.2deg);
+  transform: scale(1.05, 1.05) rotate(-16.2deg);
+}
+.o-progress-circular-10 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(18deg);
+  -ms-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.o-progress-circular-10:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-10:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-18deg);
+  -ms-transform: rotate(-18deg);
+  transform: rotate(-18deg);
+  color: #009;
+}
+.o-progress-circular-10:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-18deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-18deg);
+  transform: scale(1.05, 1.05) rotate(-18deg);
+}
+.o-progress-circular-11 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(19.8deg);
+  -ms-transform: rotate(19.8deg);
+  transform: rotate(19.8deg);
+}
+.o-progress-circular-11:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-11:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-19.8deg);
+  -ms-transform: rotate(-19.8deg);
+  transform: rotate(-19.8deg);
+  color: #009;
+}
+.o-progress-circular-11:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-19.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-19.8deg);
+  transform: scale(1.05, 1.05) rotate(-19.8deg);
+}
+.o-progress-circular-12 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(21.599999999999998deg);
+  -ms-transform: rotate(21.599999999999998deg);
+  transform: rotate(21.599999999999998deg);
+}
+.o-progress-circular-12:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-12:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-21.599999999999998deg);
+  -ms-transform: rotate(-21.599999999999998deg);
+  transform: rotate(-21.599999999999998deg);
+  color: #009;
+}
+.o-progress-circular-12:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-21.599999999999998deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-21.599999999999998deg);
+  transform: scale(1.05, 1.05) rotate(-21.599999999999998deg);
+}
+.o-progress-circular-13 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(23.400000000000002deg);
+  -ms-transform: rotate(23.400000000000002deg);
+  transform: rotate(23.400000000000002deg);
+}
+.o-progress-circular-13:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-13:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-23.400000000000002deg);
+  -ms-transform: rotate(-23.400000000000002deg);
+  transform: rotate(-23.400000000000002deg);
+  color: #009;
+}
+.o-progress-circular-13:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-23.400000000000002deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-23.400000000000002deg);
+  transform: scale(1.05, 1.05) rotate(-23.400000000000002deg);
+}
+.o-progress-circular-14 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(25.200000000000003deg);
+  -ms-transform: rotate(25.200000000000003deg);
+  transform: rotate(25.200000000000003deg);
+}
+.o-progress-circular-14:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-14:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-25.200000000000003deg);
+  -ms-transform: rotate(-25.200000000000003deg);
+  transform: rotate(-25.200000000000003deg);
+  color: #009;
+}
+.o-progress-circular-14:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-25.200000000000003deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-25.200000000000003deg);
+  transform: scale(1.05, 1.05) rotate(-25.200000000000003deg);
+}
+.o-progress-circular-15 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(27deg);
+  -ms-transform: rotate(27deg);
+  transform: rotate(27deg);
+}
+.o-progress-circular-15:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-15:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-27deg);
+  -ms-transform: rotate(-27deg);
+  transform: rotate(-27deg);
+  color: #009;
+}
+.o-progress-circular-15:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-27deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-27deg);
+  transform: scale(1.05, 1.05) rotate(-27deg);
+}
+.o-progress-circular-16 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(28.8deg);
+  -ms-transform: rotate(28.8deg);
+  transform: rotate(28.8deg);
+}
+.o-progress-circular-16:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-16:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-28.8deg);
+  -ms-transform: rotate(-28.8deg);
+  transform: rotate(-28.8deg);
+  color: #009;
+}
+.o-progress-circular-16:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-28.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-28.8deg);
+  transform: scale(1.05, 1.05) rotate(-28.8deg);
+}
+.o-progress-circular-17 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(30.6deg);
+  -ms-transform: rotate(30.6deg);
+  transform: rotate(30.6deg);
+}
+.o-progress-circular-17:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-17:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-30.6deg);
+  -ms-transform: rotate(-30.6deg);
+  transform: rotate(-30.6deg);
+  color: #009;
+}
+.o-progress-circular-17:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-30.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-30.6deg);
+  transform: scale(1.05, 1.05) rotate(-30.6deg);
+}
+.o-progress-circular-18 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(32.4deg);
+  -ms-transform: rotate(32.4deg);
+  transform: rotate(32.4deg);
+}
+.o-progress-circular-18:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-18:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-32.4deg);
+  -ms-transform: rotate(-32.4deg);
+  transform: rotate(-32.4deg);
+  color: #009;
+}
+.o-progress-circular-18:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-32.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-32.4deg);
+  transform: scale(1.05, 1.05) rotate(-32.4deg);
+}
+.o-progress-circular-19 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(34.2deg);
+  -ms-transform: rotate(34.2deg);
+  transform: rotate(34.2deg);
+}
+.o-progress-circular-19:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-19:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-34.2deg);
+  -ms-transform: rotate(-34.2deg);
+  transform: rotate(-34.2deg);
+  color: #009;
+}
+.o-progress-circular-19:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-34.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-34.2deg);
+  transform: scale(1.05, 1.05) rotate(-34.2deg);
+}
+.o-progress-circular-20 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.o-progress-circular-20:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-20:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-36deg);
+  -ms-transform: rotate(-36deg);
+  transform: rotate(-36deg);
+  color: #009;
+}
+.o-progress-circular-20:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-36deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-36deg);
+  transform: scale(1.05, 1.05) rotate(-36deg);
+}
+.o-progress-circular-21 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(37.8deg);
+  -ms-transform: rotate(37.8deg);
+  transform: rotate(37.8deg);
+}
+.o-progress-circular-21:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-21:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-37.8deg);
+  -ms-transform: rotate(-37.8deg);
+  transform: rotate(-37.8deg);
+  color: #009;
+}
+.o-progress-circular-21:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-37.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-37.8deg);
+  transform: scale(1.05, 1.05) rotate(-37.8deg);
+}
+.o-progress-circular-22 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(39.6deg);
+  -ms-transform: rotate(39.6deg);
+  transform: rotate(39.6deg);
+}
+.o-progress-circular-22:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-22:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-39.6deg);
+  -ms-transform: rotate(-39.6deg);
+  transform: rotate(-39.6deg);
+  color: #009;
+}
+.o-progress-circular-22:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-39.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-39.6deg);
+  transform: scale(1.05, 1.05) rotate(-39.6deg);
+}
+.o-progress-circular-23 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(41.4deg);
+  -ms-transform: rotate(41.4deg);
+  transform: rotate(41.4deg);
+}
+.o-progress-circular-23:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-23:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-41.4deg);
+  -ms-transform: rotate(-41.4deg);
+  transform: rotate(-41.4deg);
+  color: #009;
+}
+.o-progress-circular-23:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-41.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-41.4deg);
+  transform: scale(1.05, 1.05) rotate(-41.4deg);
+}
+.o-progress-circular-24 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(43.199999999999996deg);
+  -ms-transform: rotate(43.199999999999996deg);
+  transform: rotate(43.199999999999996deg);
+}
+.o-progress-circular-24:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-24:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-43.199999999999996deg);
+  -ms-transform: rotate(-43.199999999999996deg);
+  transform: rotate(-43.199999999999996deg);
+  color: #009;
+}
+.o-progress-circular-24:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-43.199999999999996deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-43.199999999999996deg);
+  transform: scale(1.05, 1.05) rotate(-43.199999999999996deg);
+}
+.o-progress-circular-25 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.o-progress-circular-25:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-25:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  color: #009;
+}
+.o-progress-circular-25:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-45deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-45deg);
+  transform: scale(1.05, 1.05) rotate(-45deg);
+}
+.o-progress-circular-26 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(46.800000000000004deg);
+  -ms-transform: rotate(46.800000000000004deg);
+  transform: rotate(46.800000000000004deg);
+}
+.o-progress-circular-26:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-26:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-46.800000000000004deg);
+  -ms-transform: rotate(-46.800000000000004deg);
+  transform: rotate(-46.800000000000004deg);
+  color: #009;
+}
+.o-progress-circular-26:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-46.800000000000004deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-46.800000000000004deg);
+  transform: scale(1.05, 1.05) rotate(-46.800000000000004deg);
+}
+.o-progress-circular-27 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(48.6deg);
+  -ms-transform: rotate(48.6deg);
+  transform: rotate(48.6deg);
+}
+.o-progress-circular-27:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-27:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-48.6deg);
+  -ms-transform: rotate(-48.6deg);
+  transform: rotate(-48.6deg);
+  color: #009;
+}
+.o-progress-circular-27:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-48.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-48.6deg);
+  transform: scale(1.05, 1.05) rotate(-48.6deg);
+}
+.o-progress-circular-28 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(50.400000000000006deg);
+  -ms-transform: rotate(50.400000000000006deg);
+  transform: rotate(50.400000000000006deg);
+}
+.o-progress-circular-28:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-28:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-50.400000000000006deg);
+  -ms-transform: rotate(-50.400000000000006deg);
+  transform: rotate(-50.400000000000006deg);
+  color: #009;
+}
+.o-progress-circular-28:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-50.400000000000006deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-50.400000000000006deg);
+  transform: scale(1.05, 1.05) rotate(-50.400000000000006deg);
+}
+.o-progress-circular-29 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(52.199999999999996deg);
+  -ms-transform: rotate(52.199999999999996deg);
+  transform: rotate(52.199999999999996deg);
+}
+.o-progress-circular-29:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-29:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-52.199999999999996deg);
+  -ms-transform: rotate(-52.199999999999996deg);
+  transform: rotate(-52.199999999999996deg);
+  color: #009;
+}
+.o-progress-circular-29:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-52.199999999999996deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-52.199999999999996deg);
+  transform: scale(1.05, 1.05) rotate(-52.199999999999996deg);
+}
+.o-progress-circular-30 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.o-progress-circular-30:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-30:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-54deg);
+  -ms-transform: rotate(-54deg);
+  transform: rotate(-54deg);
+  color: #009;
+}
+.o-progress-circular-30:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-54deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-54deg);
+  transform: scale(1.05, 1.05) rotate(-54deg);
+}
+.o-progress-circular-31 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(55.8deg);
+  -ms-transform: rotate(55.8deg);
+  transform: rotate(55.8deg);
+}
+.o-progress-circular-31:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-31:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-55.8deg);
+  -ms-transform: rotate(-55.8deg);
+  transform: rotate(-55.8deg);
+  color: #009;
+}
+.o-progress-circular-31:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-55.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-55.8deg);
+  transform: scale(1.05, 1.05) rotate(-55.8deg);
+}
+.o-progress-circular-32 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(57.6deg);
+  -ms-transform: rotate(57.6deg);
+  transform: rotate(57.6deg);
+}
+.o-progress-circular-32:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-32:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-57.6deg);
+  -ms-transform: rotate(-57.6deg);
+  transform: rotate(-57.6deg);
+  color: #009;
+}
+.o-progress-circular-32:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-57.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-57.6deg);
+  transform: scale(1.05, 1.05) rotate(-57.6deg);
+}
+.o-progress-circular-33 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(59.400000000000006deg);
+  -ms-transform: rotate(59.400000000000006deg);
+  transform: rotate(59.400000000000006deg);
+}
+.o-progress-circular-33:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-33:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-59.400000000000006deg);
+  -ms-transform: rotate(-59.400000000000006deg);
+  transform: rotate(-59.400000000000006deg);
+  color: #009;
+}
+.o-progress-circular-33:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-59.400000000000006deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-59.400000000000006deg);
+  transform: scale(1.05, 1.05) rotate(-59.400000000000006deg);
+}
+.o-progress-circular-34 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(61.2deg);
+  -ms-transform: rotate(61.2deg);
+  transform: rotate(61.2deg);
+}
+.o-progress-circular-34:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-34:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-61.2deg);
+  -ms-transform: rotate(-61.2deg);
+  transform: rotate(-61.2deg);
+  color: #009;
+}
+.o-progress-circular-34:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-61.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-61.2deg);
+  transform: scale(1.05, 1.05) rotate(-61.2deg);
+}
+.o-progress-circular-35 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(62.99999999999999deg);
+  -ms-transform: rotate(62.99999999999999deg);
+  transform: rotate(62.99999999999999deg);
+}
+.o-progress-circular-35:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-35:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-62.99999999999999deg);
+  -ms-transform: rotate(-62.99999999999999deg);
+  transform: rotate(-62.99999999999999deg);
+  color: #009;
+}
+.o-progress-circular-35:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-62.99999999999999deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-62.99999999999999deg);
+  transform: scale(1.05, 1.05) rotate(-62.99999999999999deg);
+}
+.o-progress-circular-36 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(64.8deg);
+  -ms-transform: rotate(64.8deg);
+  transform: rotate(64.8deg);
+}
+.o-progress-circular-36:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-36:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-64.8deg);
+  -ms-transform: rotate(-64.8deg);
+  transform: rotate(-64.8deg);
+  color: #009;
+}
+.o-progress-circular-36:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-64.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-64.8deg);
+  transform: scale(1.05, 1.05) rotate(-64.8deg);
+}
+.o-progress-circular-37 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(66.6deg);
+  -ms-transform: rotate(66.6deg);
+  transform: rotate(66.6deg);
+}
+.o-progress-circular-37:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-37:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-66.6deg);
+  -ms-transform: rotate(-66.6deg);
+  transform: rotate(-66.6deg);
+  color: #009;
+}
+.o-progress-circular-37:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-66.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-66.6deg);
+  transform: scale(1.05, 1.05) rotate(-66.6deg);
+}
+.o-progress-circular-38 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(68.4deg);
+  -ms-transform: rotate(68.4deg);
+  transform: rotate(68.4deg);
+}
+.o-progress-circular-38:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-38:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-68.4deg);
+  -ms-transform: rotate(-68.4deg);
+  transform: rotate(-68.4deg);
+  color: #009;
+}
+.o-progress-circular-38:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-68.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-68.4deg);
+  transform: scale(1.05, 1.05) rotate(-68.4deg);
+}
+.o-progress-circular-39 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(70.2deg);
+  -ms-transform: rotate(70.2deg);
+  transform: rotate(70.2deg);
+}
+.o-progress-circular-39:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-39:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-70.2deg);
+  -ms-transform: rotate(-70.2deg);
+  transform: rotate(-70.2deg);
+  color: #009;
+}
+.o-progress-circular-39:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-70.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-70.2deg);
+  transform: scale(1.05, 1.05) rotate(-70.2deg);
+}
+.o-progress-circular-40 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(72deg);
+  -ms-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.o-progress-circular-40:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-40:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-72deg);
+  -ms-transform: rotate(-72deg);
+  transform: rotate(-72deg);
+  color: #009;
+}
+.o-progress-circular-40:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-72deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-72deg);
+  transform: scale(1.05, 1.05) rotate(-72deg);
+}
+.o-progress-circular-41 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(73.8deg);
+  -ms-transform: rotate(73.8deg);
+  transform: rotate(73.8deg);
+}
+.o-progress-circular-41:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-41:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-73.8deg);
+  -ms-transform: rotate(-73.8deg);
+  transform: rotate(-73.8deg);
+  color: #009;
+}
+.o-progress-circular-41:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-73.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-73.8deg);
+  transform: scale(1.05, 1.05) rotate(-73.8deg);
+}
+.o-progress-circular-42 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(75.6deg);
+  -ms-transform: rotate(75.6deg);
+  transform: rotate(75.6deg);
+}
+.o-progress-circular-42:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-42:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-75.6deg);
+  -ms-transform: rotate(-75.6deg);
+  transform: rotate(-75.6deg);
+  color: #009;
+}
+.o-progress-circular-42:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-75.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-75.6deg);
+  transform: scale(1.05, 1.05) rotate(-75.6deg);
+}
+.o-progress-circular-43 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(77.4deg);
+  -ms-transform: rotate(77.4deg);
+  transform: rotate(77.4deg);
+}
+.o-progress-circular-43:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-43:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-77.4deg);
+  -ms-transform: rotate(-77.4deg);
+  transform: rotate(-77.4deg);
+  color: #009;
+}
+.o-progress-circular-43:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-77.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-77.4deg);
+  transform: scale(1.05, 1.05) rotate(-77.4deg);
+}
+.o-progress-circular-44 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(79.2deg);
+  -ms-transform: rotate(79.2deg);
+  transform: rotate(79.2deg);
+}
+.o-progress-circular-44:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-44:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-79.2deg);
+  -ms-transform: rotate(-79.2deg);
+  transform: rotate(-79.2deg);
+  color: #009;
+}
+.o-progress-circular-44:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-79.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-79.2deg);
+  transform: scale(1.05, 1.05) rotate(-79.2deg);
+}
+.o-progress-circular-45 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(81deg);
+  -ms-transform: rotate(81deg);
+  transform: rotate(81deg);
+}
+.o-progress-circular-45:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-45:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-81deg);
+  -ms-transform: rotate(-81deg);
+  transform: rotate(-81deg);
+  color: #009;
+}
+.o-progress-circular-45:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-81deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-81deg);
+  transform: scale(1.05, 1.05) rotate(-81deg);
+}
+.o-progress-circular-46 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(82.8deg);
+  -ms-transform: rotate(82.8deg);
+  transform: rotate(82.8deg);
+}
+.o-progress-circular-46:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-46:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-82.8deg);
+  -ms-transform: rotate(-82.8deg);
+  transform: rotate(-82.8deg);
+  color: #009;
+}
+.o-progress-circular-46:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-82.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-82.8deg);
+  transform: scale(1.05, 1.05) rotate(-82.8deg);
+}
+.o-progress-circular-47 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(84.6deg);
+  -ms-transform: rotate(84.6deg);
+  transform: rotate(84.6deg);
+}
+.o-progress-circular-47:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-47:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-84.6deg);
+  -ms-transform: rotate(-84.6deg);
+  transform: rotate(-84.6deg);
+  color: #009;
+}
+.o-progress-circular-47:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-84.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-84.6deg);
+  transform: scale(1.05, 1.05) rotate(-84.6deg);
+}
+.o-progress-circular-48 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(86.39999999999999deg);
+  -ms-transform: rotate(86.39999999999999deg);
+  transform: rotate(86.39999999999999deg);
+}
+.o-progress-circular-48:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-48:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-86.39999999999999deg);
+  -ms-transform: rotate(-86.39999999999999deg);
+  transform: rotate(-86.39999999999999deg);
+  color: #009;
+}
+.o-progress-circular-48:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-86.39999999999999deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-86.39999999999999deg);
+  transform: scale(1.05, 1.05) rotate(-86.39999999999999deg);
+}
+.o-progress-circular-49 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(88.2deg);
+  -ms-transform: rotate(88.2deg);
+  transform: rotate(88.2deg);
+}
+.o-progress-circular-49:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-49:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-88.2deg);
+  -ms-transform: rotate(-88.2deg);
+  transform: rotate(-88.2deg);
+  color: #009;
+}
+.o-progress-circular-49:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-88.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-88.2deg);
+  transform: scale(1.05, 1.05) rotate(-88.2deg);
+}
+.o-progress-circular-50 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.o-progress-circular-50:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-50:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  color: #009;
+}
+.o-progress-circular-50:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-90deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-90deg);
+  transform: scale(1.05, 1.05) rotate(-90deg);
+}
+.o-progress-circular-51 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(91.8deg);
+  -ms-transform: rotate(91.8deg);
+  transform: rotate(91.8deg);
+}
+.o-progress-circular-51:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-51:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-91.8deg);
+  -ms-transform: rotate(-91.8deg);
+  transform: rotate(-91.8deg);
+  color: #009;
+}
+.o-progress-circular-51:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-91.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-91.8deg);
+  transform: scale(1.05, 1.05) rotate(-91.8deg);
+}
+.o-progress-circular-52 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(93.60000000000001deg);
+  -ms-transform: rotate(93.60000000000001deg);
+  transform: rotate(93.60000000000001deg);
+}
+.o-progress-circular-52:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-52:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-93.60000000000001deg);
+  -ms-transform: rotate(-93.60000000000001deg);
+  transform: rotate(-93.60000000000001deg);
+  color: #009;
+}
+.o-progress-circular-52:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-93.60000000000001deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-93.60000000000001deg);
+  transform: scale(1.05, 1.05) rotate(-93.60000000000001deg);
+}
+.o-progress-circular-53 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(95.4deg);
+  -ms-transform: rotate(95.4deg);
+  transform: rotate(95.4deg);
+}
+.o-progress-circular-53:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-53:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-95.4deg);
+  -ms-transform: rotate(-95.4deg);
+  transform: rotate(-95.4deg);
+  color: #009;
+}
+.o-progress-circular-53:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-95.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-95.4deg);
+  transform: scale(1.05, 1.05) rotate(-95.4deg);
+}
+.o-progress-circular-54 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(97.2deg);
+  -ms-transform: rotate(97.2deg);
+  transform: rotate(97.2deg);
+}
+.o-progress-circular-54:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-54:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-97.2deg);
+  -ms-transform: rotate(-97.2deg);
+  transform: rotate(-97.2deg);
+  color: #009;
+}
+.o-progress-circular-54:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-97.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-97.2deg);
+  transform: scale(1.05, 1.05) rotate(-97.2deg);
+}
+.o-progress-circular-55 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(99.00000000000001deg);
+  -ms-transform: rotate(99.00000000000001deg);
+  transform: rotate(99.00000000000001deg);
+}
+.o-progress-circular-55:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-55:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-99.00000000000001deg);
+  -ms-transform: rotate(-99.00000000000001deg);
+  transform: rotate(-99.00000000000001deg);
+  color: #009;
+}
+.o-progress-circular-55:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-99.00000000000001deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-99.00000000000001deg);
+  transform: scale(1.05, 1.05) rotate(-99.00000000000001deg);
+}
+.o-progress-circular-56 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(100.80000000000001deg);
+  -ms-transform: rotate(100.80000000000001deg);
+  transform: rotate(100.80000000000001deg);
+}
+.o-progress-circular-56:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-56:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-100.80000000000001deg);
+  -ms-transform: rotate(-100.80000000000001deg);
+  transform: rotate(-100.80000000000001deg);
+  color: #009;
+}
+.o-progress-circular-56:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-100.80000000000001deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-100.80000000000001deg);
+  transform: scale(1.05, 1.05) rotate(-100.80000000000001deg);
+}
+.o-progress-circular-57 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(102.6deg);
+  -ms-transform: rotate(102.6deg);
+  transform: rotate(102.6deg);
+}
+.o-progress-circular-57:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-57:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-102.6deg);
+  -ms-transform: rotate(-102.6deg);
+  transform: rotate(-102.6deg);
+  color: #009;
+}
+.o-progress-circular-57:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-102.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-102.6deg);
+  transform: scale(1.05, 1.05) rotate(-102.6deg);
+}
+.o-progress-circular-58 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(104.39999999999999deg);
+  -ms-transform: rotate(104.39999999999999deg);
+  transform: rotate(104.39999999999999deg);
+}
+.o-progress-circular-58:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-58:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-104.39999999999999deg);
+  -ms-transform: rotate(-104.39999999999999deg);
+  transform: rotate(-104.39999999999999deg);
+  color: #009;
+}
+.o-progress-circular-58:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-104.39999999999999deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-104.39999999999999deg);
+  transform: scale(1.05, 1.05) rotate(-104.39999999999999deg);
+}
+.o-progress-circular-59 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(106.19999999999999deg);
+  -ms-transform: rotate(106.19999999999999deg);
+  transform: rotate(106.19999999999999deg);
+}
+.o-progress-circular-59:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-59:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-106.19999999999999deg);
+  -ms-transform: rotate(-106.19999999999999deg);
+  transform: rotate(-106.19999999999999deg);
+  color: #009;
+}
+.o-progress-circular-59:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-106.19999999999999deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-106.19999999999999deg);
+  transform: scale(1.05, 1.05) rotate(-106.19999999999999deg);
+}
+.o-progress-circular-60 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(108deg);
+  -ms-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.o-progress-circular-60:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-60:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-108deg);
+  -ms-transform: rotate(-108deg);
+  transform: rotate(-108deg);
+  color: #009;
+}
+.o-progress-circular-60:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-108deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-108deg);
+  transform: scale(1.05, 1.05) rotate(-108deg);
+}
+.o-progress-circular-61 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(109.8deg);
+  -ms-transform: rotate(109.8deg);
+  transform: rotate(109.8deg);
+}
+.o-progress-circular-61:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-61:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-109.8deg);
+  -ms-transform: rotate(-109.8deg);
+  transform: rotate(-109.8deg);
+  color: #009;
+}
+.o-progress-circular-61:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-109.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-109.8deg);
+  transform: scale(1.05, 1.05) rotate(-109.8deg);
+}
+.o-progress-circular-62 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(111.6deg);
+  -ms-transform: rotate(111.6deg);
+  transform: rotate(111.6deg);
+}
+.o-progress-circular-62:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-62:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-111.6deg);
+  -ms-transform: rotate(-111.6deg);
+  transform: rotate(-111.6deg);
+  color: #009;
+}
+.o-progress-circular-62:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-111.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-111.6deg);
+  transform: scale(1.05, 1.05) rotate(-111.6deg);
+}
+.o-progress-circular-63 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(113.4deg);
+  -ms-transform: rotate(113.4deg);
+  transform: rotate(113.4deg);
+}
+.o-progress-circular-63:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-63:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-113.4deg);
+  -ms-transform: rotate(-113.4deg);
+  transform: rotate(-113.4deg);
+  color: #009;
+}
+.o-progress-circular-63:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-113.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-113.4deg);
+  transform: scale(1.05, 1.05) rotate(-113.4deg);
+}
+.o-progress-circular-64 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(115.2deg);
+  -ms-transform: rotate(115.2deg);
+  transform: rotate(115.2deg);
+}
+.o-progress-circular-64:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-64:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-115.2deg);
+  -ms-transform: rotate(-115.2deg);
+  transform: rotate(-115.2deg);
+  color: #009;
+}
+.o-progress-circular-64:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-115.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-115.2deg);
+  transform: scale(1.05, 1.05) rotate(-115.2deg);
+}
+.o-progress-circular-65 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(117deg);
+  -ms-transform: rotate(117deg);
+  transform: rotate(117deg);
+}
+.o-progress-circular-65:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-65:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-117deg);
+  -ms-transform: rotate(-117deg);
+  transform: rotate(-117deg);
+  color: #009;
+}
+.o-progress-circular-65:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-117deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-117deg);
+  transform: scale(1.05, 1.05) rotate(-117deg);
+}
+.o-progress-circular-66 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(118.80000000000001deg);
+  -ms-transform: rotate(118.80000000000001deg);
+  transform: rotate(118.80000000000001deg);
+}
+.o-progress-circular-66:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-66:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-118.80000000000001deg);
+  -ms-transform: rotate(-118.80000000000001deg);
+  transform: rotate(-118.80000000000001deg);
+  color: #009;
+}
+.o-progress-circular-66:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-118.80000000000001deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-118.80000000000001deg);
+  transform: scale(1.05, 1.05) rotate(-118.80000000000001deg);
+}
+.o-progress-circular-67 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(120.60000000000001deg);
+  -ms-transform: rotate(120.60000000000001deg);
+  transform: rotate(120.60000000000001deg);
+}
+.o-progress-circular-67:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-67:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-120.60000000000001deg);
+  -ms-transform: rotate(-120.60000000000001deg);
+  transform: rotate(-120.60000000000001deg);
+  color: #009;
+}
+.o-progress-circular-67:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-120.60000000000001deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-120.60000000000001deg);
+  transform: scale(1.05, 1.05) rotate(-120.60000000000001deg);
+}
+.o-progress-circular-68 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(122.4deg);
+  -ms-transform: rotate(122.4deg);
+  transform: rotate(122.4deg);
+}
+.o-progress-circular-68:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-68:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-122.4deg);
+  -ms-transform: rotate(-122.4deg);
+  transform: rotate(-122.4deg);
+  color: #009;
+}
+.o-progress-circular-68:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-122.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-122.4deg);
+  transform: scale(1.05, 1.05) rotate(-122.4deg);
+}
+.o-progress-circular-69 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(124.19999999999999deg);
+  -ms-transform: rotate(124.19999999999999deg);
+  transform: rotate(124.19999999999999deg);
+}
+.o-progress-circular-69:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-69:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-124.19999999999999deg);
+  -ms-transform: rotate(-124.19999999999999deg);
+  transform: rotate(-124.19999999999999deg);
+  color: #009;
+}
+.o-progress-circular-69:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-124.19999999999999deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-124.19999999999999deg);
+  transform: scale(1.05, 1.05) rotate(-124.19999999999999deg);
+}
+.o-progress-circular-70 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(125.99999999999999deg);
+  -ms-transform: rotate(125.99999999999999deg);
+  transform: rotate(125.99999999999999deg);
+}
+.o-progress-circular-70:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-70:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-125.99999999999999deg);
+  -ms-transform: rotate(-125.99999999999999deg);
+  transform: rotate(-125.99999999999999deg);
+  color: #009;
+}
+.o-progress-circular-70:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-125.99999999999999deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-125.99999999999999deg);
+  transform: scale(1.05, 1.05) rotate(-125.99999999999999deg);
+}
+.o-progress-circular-71 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(127.8deg);
+  -ms-transform: rotate(127.8deg);
+  transform: rotate(127.8deg);
+}
+.o-progress-circular-71:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-71:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-127.8deg);
+  -ms-transform: rotate(-127.8deg);
+  transform: rotate(-127.8deg);
+  color: #009;
+}
+.o-progress-circular-71:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-127.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-127.8deg);
+  transform: scale(1.05, 1.05) rotate(-127.8deg);
+}
+.o-progress-circular-72 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(129.6deg);
+  -ms-transform: rotate(129.6deg);
+  transform: rotate(129.6deg);
+}
+.o-progress-circular-72:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-72:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-129.6deg);
+  -ms-transform: rotate(-129.6deg);
+  transform: rotate(-129.6deg);
+  color: #009;
+}
+.o-progress-circular-72:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-129.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-129.6deg);
+  transform: scale(1.05, 1.05) rotate(-129.6deg);
+}
+.o-progress-circular-73 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(131.4deg);
+  -ms-transform: rotate(131.4deg);
+  transform: rotate(131.4deg);
+}
+.o-progress-circular-73:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-73:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-131.4deg);
+  -ms-transform: rotate(-131.4deg);
+  transform: rotate(-131.4deg);
+  color: #009;
+}
+.o-progress-circular-73:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-131.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-131.4deg);
+  transform: scale(1.05, 1.05) rotate(-131.4deg);
+}
+.o-progress-circular-74 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(133.2deg);
+  -ms-transform: rotate(133.2deg);
+  transform: rotate(133.2deg);
+}
+.o-progress-circular-74:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-74:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-133.2deg);
+  -ms-transform: rotate(-133.2deg);
+  transform: rotate(-133.2deg);
+  color: #009;
+}
+.o-progress-circular-74:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-133.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-133.2deg);
+  transform: scale(1.05, 1.05) rotate(-133.2deg);
+}
+.o-progress-circular-75 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.o-progress-circular-75:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-75:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  color: #009;
+}
+.o-progress-circular-75:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-135deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-135deg);
+  transform: scale(1.05, 1.05) rotate(-135deg);
+}
+.o-progress-circular-76 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(136.8deg);
+  -ms-transform: rotate(136.8deg);
+  transform: rotate(136.8deg);
+}
+.o-progress-circular-76:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-76:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-136.8deg);
+  -ms-transform: rotate(-136.8deg);
+  transform: rotate(-136.8deg);
+  color: #009;
+}
+.o-progress-circular-76:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-136.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-136.8deg);
+  transform: scale(1.05, 1.05) rotate(-136.8deg);
+}
+.o-progress-circular-77 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(138.6deg);
+  -ms-transform: rotate(138.6deg);
+  transform: rotate(138.6deg);
+}
+.o-progress-circular-77:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-77:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-138.6deg);
+  -ms-transform: rotate(-138.6deg);
+  transform: rotate(-138.6deg);
+  color: #009;
+}
+.o-progress-circular-77:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-138.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-138.6deg);
+  transform: scale(1.05, 1.05) rotate(-138.6deg);
+}
+.o-progress-circular-78 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(140.4deg);
+  -ms-transform: rotate(140.4deg);
+  transform: rotate(140.4deg);
+}
+.o-progress-circular-78:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-78:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-140.4deg);
+  -ms-transform: rotate(-140.4deg);
+  transform: rotate(-140.4deg);
+  color: #009;
+}
+.o-progress-circular-78:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-140.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-140.4deg);
+  transform: scale(1.05, 1.05) rotate(-140.4deg);
+}
+.o-progress-circular-79 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(142.20000000000002deg);
+  -ms-transform: rotate(142.20000000000002deg);
+  transform: rotate(142.20000000000002deg);
+}
+.o-progress-circular-79:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-79:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-142.20000000000002deg);
+  -ms-transform: rotate(-142.20000000000002deg);
+  transform: rotate(-142.20000000000002deg);
+  color: #009;
+}
+.o-progress-circular-79:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-142.20000000000002deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-142.20000000000002deg);
+  transform: scale(1.05, 1.05) rotate(-142.20000000000002deg);
+}
+.o-progress-circular-80 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(144deg);
+  -ms-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.o-progress-circular-80:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-80:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-144deg);
+  -ms-transform: rotate(-144deg);
+  transform: rotate(-144deg);
+  color: #009;
+}
+.o-progress-circular-80:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-144deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-144deg);
+  transform: scale(1.05, 1.05) rotate(-144deg);
+}
+.o-progress-circular-81 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(145.8deg);
+  -ms-transform: rotate(145.8deg);
+  transform: rotate(145.8deg);
+}
+.o-progress-circular-81:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-81:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-145.8deg);
+  -ms-transform: rotate(-145.8deg);
+  transform: rotate(-145.8deg);
+  color: #009;
+}
+.o-progress-circular-81:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-145.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-145.8deg);
+  transform: scale(1.05, 1.05) rotate(-145.8deg);
+}
+.o-progress-circular-82 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(147.6deg);
+  -ms-transform: rotate(147.6deg);
+  transform: rotate(147.6deg);
+}
+.o-progress-circular-82:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-82:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-147.6deg);
+  -ms-transform: rotate(-147.6deg);
+  transform: rotate(-147.6deg);
+  color: #009;
+}
+.o-progress-circular-82:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-147.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-147.6deg);
+  transform: scale(1.05, 1.05) rotate(-147.6deg);
+}
+.o-progress-circular-83 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(149.4deg);
+  -ms-transform: rotate(149.4deg);
+  transform: rotate(149.4deg);
+}
+.o-progress-circular-83:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-83:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-149.4deg);
+  -ms-transform: rotate(-149.4deg);
+  transform: rotate(-149.4deg);
+  color: #009;
+}
+.o-progress-circular-83:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-149.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-149.4deg);
+  transform: scale(1.05, 1.05) rotate(-149.4deg);
+}
+.o-progress-circular-84 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(151.2deg);
+  -ms-transform: rotate(151.2deg);
+  transform: rotate(151.2deg);
+}
+.o-progress-circular-84:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-84:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-151.2deg);
+  -ms-transform: rotate(-151.2deg);
+  transform: rotate(-151.2deg);
+  color: #009;
+}
+.o-progress-circular-84:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-151.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-151.2deg);
+  transform: scale(1.05, 1.05) rotate(-151.2deg);
+}
+.o-progress-circular-85 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(153deg);
+  -ms-transform: rotate(153deg);
+  transform: rotate(153deg);
+}
+.o-progress-circular-85:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-85:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-153deg);
+  -ms-transform: rotate(-153deg);
+  transform: rotate(-153deg);
+  color: #009;
+}
+.o-progress-circular-85:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-153deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-153deg);
+  transform: scale(1.05, 1.05) rotate(-153deg);
+}
+.o-progress-circular-86 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(154.8deg);
+  -ms-transform: rotate(154.8deg);
+  transform: rotate(154.8deg);
+}
+.o-progress-circular-86:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-86:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-154.8deg);
+  -ms-transform: rotate(-154.8deg);
+  transform: rotate(-154.8deg);
+  color: #009;
+}
+.o-progress-circular-86:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-154.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-154.8deg);
+  transform: scale(1.05, 1.05) rotate(-154.8deg);
+}
+.o-progress-circular-87 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(156.6deg);
+  -ms-transform: rotate(156.6deg);
+  transform: rotate(156.6deg);
+}
+.o-progress-circular-87:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-87:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-156.6deg);
+  -ms-transform: rotate(-156.6deg);
+  transform: rotate(-156.6deg);
+  color: #009;
+}
+.o-progress-circular-87:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-156.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-156.6deg);
+  transform: scale(1.05, 1.05) rotate(-156.6deg);
+}
+.o-progress-circular-88 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(158.4deg);
+  -ms-transform: rotate(158.4deg);
+  transform: rotate(158.4deg);
+}
+.o-progress-circular-88:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-88:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-158.4deg);
+  -ms-transform: rotate(-158.4deg);
+  transform: rotate(-158.4deg);
+  color: #009;
+}
+.o-progress-circular-88:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-158.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-158.4deg);
+  transform: scale(1.05, 1.05) rotate(-158.4deg);
+}
+.o-progress-circular-89 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(160.2deg);
+  -ms-transform: rotate(160.2deg);
+  transform: rotate(160.2deg);
+}
+.o-progress-circular-89:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-89:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-160.2deg);
+  -ms-transform: rotate(-160.2deg);
+  transform: rotate(-160.2deg);
+  color: #009;
+}
+.o-progress-circular-89:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-160.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-160.2deg);
+  transform: scale(1.05, 1.05) rotate(-160.2deg);
+}
+.o-progress-circular-90 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(162deg);
+  -ms-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.o-progress-circular-90:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-90:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-162deg);
+  -ms-transform: rotate(-162deg);
+  transform: rotate(-162deg);
+  color: #009;
+}
+.o-progress-circular-90:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-162deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-162deg);
+  transform: scale(1.05, 1.05) rotate(-162deg);
+}
+.o-progress-circular-91 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(163.8deg);
+  -ms-transform: rotate(163.8deg);
+  transform: rotate(163.8deg);
+}
+.o-progress-circular-91:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-91:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-163.8deg);
+  -ms-transform: rotate(-163.8deg);
+  transform: rotate(-163.8deg);
+  color: #009;
+}
+.o-progress-circular-91:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-163.8deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-163.8deg);
+  transform: scale(1.05, 1.05) rotate(-163.8deg);
+}
+.o-progress-circular-92 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(165.6deg);
+  -ms-transform: rotate(165.6deg);
+  transform: rotate(165.6deg);
+}
+.o-progress-circular-92:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-92:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-165.6deg);
+  -ms-transform: rotate(-165.6deg);
+  transform: rotate(-165.6deg);
+  color: #009;
+}
+.o-progress-circular-92:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-165.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-165.6deg);
+  transform: scale(1.05, 1.05) rotate(-165.6deg);
+}
+.o-progress-circular-93 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(167.4deg);
+  -ms-transform: rotate(167.4deg);
+  transform: rotate(167.4deg);
+}
+.o-progress-circular-93:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-93:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-167.4deg);
+  -ms-transform: rotate(-167.4deg);
+  transform: rotate(-167.4deg);
+  color: #009;
+}
+.o-progress-circular-93:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-167.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-167.4deg);
+  transform: scale(1.05, 1.05) rotate(-167.4deg);
+}
+.o-progress-circular-94 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(169.2deg);
+  -ms-transform: rotate(169.2deg);
+  transform: rotate(169.2deg);
+}
+.o-progress-circular-94:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-94:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-169.2deg);
+  -ms-transform: rotate(-169.2deg);
+  transform: rotate(-169.2deg);
+  color: #009;
+}
+.o-progress-circular-94:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-169.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-169.2deg);
+  transform: scale(1.05, 1.05) rotate(-169.2deg);
+}
+.o-progress-circular-95 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(171deg);
+  -ms-transform: rotate(171deg);
+  transform: rotate(171deg);
+}
+.o-progress-circular-95:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-95:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-171deg);
+  -ms-transform: rotate(-171deg);
+  transform: rotate(-171deg);
+  color: #009;
+}
+.o-progress-circular-95:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-171deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-171deg);
+  transform: scale(1.05, 1.05) rotate(-171deg);
+}
+.o-progress-circular-96 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(172.79999999999998deg);
+  -ms-transform: rotate(172.79999999999998deg);
+  transform: rotate(172.79999999999998deg);
+}
+.o-progress-circular-96:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-96:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-172.79999999999998deg);
+  -ms-transform: rotate(-172.79999999999998deg);
+  transform: rotate(-172.79999999999998deg);
+  color: #009;
+}
+.o-progress-circular-96:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-172.79999999999998deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-172.79999999999998deg);
+  transform: scale(1.05, 1.05) rotate(-172.79999999999998deg);
+}
+.o-progress-circular-97 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(174.6deg);
+  -ms-transform: rotate(174.6deg);
+  transform: rotate(174.6deg);
+}
+.o-progress-circular-97:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-97:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-174.6deg);
+  -ms-transform: rotate(-174.6deg);
+  transform: rotate(-174.6deg);
+  color: #009;
+}
+.o-progress-circular-97:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-174.6deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-174.6deg);
+  transform: scale(1.05, 1.05) rotate(-174.6deg);
+}
+.o-progress-circular-98 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(176.4deg);
+  -ms-transform: rotate(176.4deg);
+  transform: rotate(176.4deg);
+}
+.o-progress-circular-98:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-98:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-176.4deg);
+  -ms-transform: rotate(-176.4deg);
+  transform: rotate(-176.4deg);
+  color: #009;
+}
+.o-progress-circular-98:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-176.4deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-176.4deg);
+  transform: scale(1.05, 1.05) rotate(-176.4deg);
+}
+.o-progress-circular-99 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(178.2deg);
+  -ms-transform: rotate(178.2deg);
+  transform: rotate(178.2deg);
+}
+.o-progress-circular-99:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-99:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-178.2deg);
+  -ms-transform: rotate(-178.2deg);
+  transform: rotate(-178.2deg);
+  color: #009;
+}
+.o-progress-circular-99:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-178.2deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-178.2deg);
+  transform: scale(1.05, 1.05) rotate(-178.2deg);
+}
+.o-progress-circular-100 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition: 4s;
+  transition: 4s;
+  background: -webkit-linear-gradient(90deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  background: linear-gradient(0deg, #009 50%, rgba(0,0,153,0.5) 50%);
+  border-color: attr(data-attr);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.o-progress-circular-100:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.8em;
+  box-sizing: border-box;
+  line-height: 3;
+}
+.o-progress-circular-100:before {
+  -webkit-transition: 0s;
+  transition: 0s;
+  background: #f5f5f5 content-box;
+  content: attr(data-percent);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  color: #009;
+}
+.o-progress-circular-100:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(transparent 50%, #f5f5f5 50%);
+  background: linear-gradient(transparent 50%, #f5f5f5 50%);
+  -webkit-transform: scale(1.05, 1.05) rotate(-180deg);
+  -ms-transform: scale(1.05, 1.05) rotate(-180deg);
+  transform: scale(1.05, 1.05) rotate(-180deg);
+}
+@-webkit-keyframes mov {
+  from {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
+  }
+}
+@keyframes mov {
+  from {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
+  }
+}
+@-webkit-keyframes previus {
+  from {
+    -webkit-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes previus {
+  from {
+    -webkit-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes rot {
+  from {
+    font-size: 0rem;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    font-size: 3rem;
+    -webkit-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+@keyframes rot {
+  from {
+    font-size: 0rem;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    font-size: 3rem;
+    -webkit-transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+.wizard-container {
+  overflow: hidden;
+}
+.wizard-steps {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wizard-steps-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  margin: auto;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.wizard-step {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ced7ea;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.wizard-step.active {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #34b0df;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.wizard-line {
+  width: 20%;
+  height: 14px;
+  background-color: #ced7ea;
+}
+.wizard-progress {
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  padding-top: 2px;
+  box-sizing: border-box;
+  width: 0;
+  height: 100%;
+  background-color: #34b0df;
+  overflow: hidden;
+}
+.wizard-progress:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 2px;
+  margin-right: 0px;
+  display: block;
+}
+.wizard-progress.active {
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  width: 100%;
+  height: 100%;
+  background-color: #34b0df;
+}
+.wizard-progress.active:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 2px;
+  margin-left: -50px;
+  display: block;
+  -webkit-animation: mov 2s;
+  animation: mov 2s;
+}
+.wizard-selected {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 10px;
+}
+.wizard-selected.small {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 15px;
+  margin-top: 28px;
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+}
+.wizard-pane {
+  border: none;
+}
+.wizard-next,
+.wizard-prev,
+.wizard-end {
+  margin: 10px 5px;
+  float: right;
+}
+.wizard-header {
+  padding: 10px;
+  max-height: 70px;
+}
+.wizard-body {
+  min-height: 100px;
+  padding: 10px;
+  max-width: 100%;
+  margin-top: 10px;
+}
+.wizard-footer {
+  height: 52px;
+  widht: 100%;
+  padding: 10px;
+}
+.wizard-pane {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #fafafa;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+  position: relative;
+}
+.wizard-pane.move-right {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateX(1500px);
+  -ms-transform: translateX(1500px);
+  transform: translateX(1500px);
+}
+.wizard-pane.move-left {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateX(-1500px);
+  -ms-transform: translateX(-1500px);
+  transform: translateX(-1500px);
+}
+.wizard-icon {
+  display: none;
+  margin: 0 auto;
+}
+.wizard-icon.success {
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  width: 100%;
+  display: block;
+  -webkit-animation: rot 0.5s;
+  animation: rot 0.5s;
+}
+legend {
+  border: none;
+}
+.carousel-custom {
+  max-height: 250px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  white-space: nowrap;
+  border: none;
+}
+.carousel-left,
+.carousel-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.carousel-left {
+  height: 100%;
+  width: 25px;
+  background-color: #fff;
+  position: absolute;
+  lef: 0px;
+  top: 0px;
+  z-index: 44;
+  cursor: pointer;
+  color: #5e5e5e;
+}
+.carousel-left:hover {
+  background-color: #34b0df;
+  color: #fff !important;
+  box-shadow: none;
+}
+.carousel-right {
+  height: 100%;
+  width: 25px;
+  background-color: #fff;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 44;
+  cursor: pointer;
+  color: #5e5e5e;
+}
+.carousel-right:hover {
+  background-color: #34b0df;
+  color: #fff !important;
+  box-shadow: none;
+}
+.carousel-move {
+  margin-left: 25px;
+}
+.o-arrow-right,
+.o-arrow-left {
+  display: none;
+}
+.o-custom-upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.name-upload {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 6px 10px;
+  width: 50%;
+  height: 100%;
+}
+.o-notify-container {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  height: 20%;
+  width: 25%;
+  display: none;
+  z-index: 10001;
+}
+.o-notify-success {
+  position: fixed;
+  bottom: -50%;
+  right: 10px;
+  min-width: 320px;
+  height: 100px;
+  z-index: 999999;
+}
+.o-notify-success-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  background: -webkit-linear-gradient(0deg, #59b2cd 10%, #59b2cd, #7fbbcd, #7fbbcd);
+  background: linear-gradient(90deg, #59b2cd 10%, #59b2cd, #7fbbcd, #7fbbcd);
+  width: 100%;
+  height: 80%;
+  margin: 0;
+  border-radius: 10px;
+}
+.o-notify-success-footer {
+  position: relative;
+  margin: 0;
+  height: 20%;
+  width: 100%;
+}
+.o-notify-success-origin {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  background: -webkit-linear-gradient(0deg, #59b2cd 10%, #59b2cd, #7fbbcd, #7fbbcd);
+  background: linear-gradient(90deg, #59b2cd 10%, #59b2cd, #7fbbcd, #7fbbcd);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #7fbbcd;
+}
+.o-notify-success-icon {
+  height: 100%;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 0px 5px #948b96;
+}
+.o-notify-success-icon i {
+  margin: 10px;
+}
+.o-notify-success-message {
+  width: 74%;
+  height: 100%;
+  padding: 5px;
+  color: #fff;
+  text-shadow: 1px 0px 5px #948b96;
+}
+.o-notify-success-message span {
+  font-size: 1.5em;
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+.o-notify-success-message span p {
+  font-size: 0.9em;
+  margin: 10px 0 0 0;
+}
+.o-notify-fail {
+  position: fixed;
+  bottom: -50%;
+  right: 10px;
+  min-width: 320px;
+  height: 100px;
+  z-index: 999999;
+}
+.o-notify-fail-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  background: -webkit-linear-gradient(0deg, #f30f19 10%, #f30f19, #e23131, #e23131);
+  background: linear-gradient(90deg, #f30f19 10%, #f30f19, #e23131, #e23131);
+  width: 100%;
+  height: 80%;
+  margin: 0;
+  border-radius: 10px;
+}
+.o-notify-fail-footer {
+  position: relative;
+  margin: 0;
+  height: 20%;
+  width: 100%;
+}
+.o-notify-fail-origin {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  background: -webkit-linear-gradient(0deg, #f30f19 10%, #f30f19, #e23131, #e23131);
+  background: linear-gradient(90deg, #f30f19 10%, #f30f19, #e23131, #e23131);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #e23131;
+}
+.o-notify-fail-icon {
+  height: 100%;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 0px 5px #948b96;
+}
+.o-notify-fail-icon i {
+  margin: 10px;
+}
+.o-notify-fail-message {
+  width: 74%;
+  height: 100%;
+  padding: 5px;
+  color: #fff;
+  text-shadow: 1px 0px 5px #948b96;
+}
+.o-notify-fail-message span {
+  font-size: 1.5em;
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+.o-notify-fail-message span p {
+  font-size: 0.9em;
+  margin: 10px 0 0 0;
+}
+.o-notify-warning {
+  position: fixed;
+  bottom: -50%;
+  right: 10px;
+  min-width: 320px;
+  height: 100px;
+  z-index: 999999;
+}
+.o-notify-warning-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  background: -webkit-linear-gradient(0deg, #ffdd2d 10%, #ffdd2d, #ffdd2d, #ffdd2d);
+  background: linear-gradient(90deg, #ffdd2d 10%, #ffdd2d, #ffdd2d, #ffdd2d);
+  width: 100%;
+  height: 80%;
+  margin: 0;
+  border-radius: 10px;
+}
+.o-notify-warning-footer {
+  position: relative;
+  margin: 0;
+  height: 20%;
+  width: 100%;
+}
+.o-notify-warning-origin {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  background: -webkit-linear-gradient(0deg, #ffdd2d 10%, #ffdd2d, #ffdd2d, #ffdd2d);
+  background: linear-gradient(90deg, #ffdd2d 10%, #ffdd2d, #ffdd2d, #ffdd2d);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ffdd2d;
+}
+.o-notify-warning-icon {
+  height: 100%;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 0px 5px #948b96;
+}
+.o-notify-warning-icon i {
+  margin: 10px;
+}
+.o-notify-warning-message {
+  width: 74%;
+  height: 100%;
+  padding: 5px;
+  color: #fff;
+  text-shadow: 1px 0px 5px #948b96;
+}
+.o-notify-warning-message span {
+  font-size: 1.5em;
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+.o-notify-warning-message span p {
+  font-size: 0.9em;
+  margin: 10px 0 0 0;
+}
+.o-notify-card {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  -webkit-perspective: 200px;
+  -ms-perspective: 200px;
+  perspective: 200px;
+  -moz-perspective: 200px;
+}
+.o-notify-img {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  width: 50%;
+  height: 100%;
+  background-image: url("/static/img/omega.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.o-notify-flipper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 2s;
+  transition: transform 2s;
+  -webkit-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: transform 2s;
+  -moz-transform-origin: right center;
+  border-radius: 10px;
+  right: 0;
+}
+.o-notify-flipper.success {
+  -webkit-transform: translateX(-100%) rotateY(-180deg);
+  -ms-transform: translateX(-100%) rotateY(-180deg);
+  transform: translateX(-100%) rotateY(-180deg);
+  -moz-transform: translateX(-100%) rotateY(-180deg);
+}
+.o-notify-front,
+.o-notify-back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  text-align: center;
+}
+.o-notify-front {
+  background: #559f35;
+  color: #fff;
+  font-size: 12px;
+  text-align: right;
+}
+.o-notify-back {
+  background: #34b0df;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  font-size: 16px;
+  color: #fff;
+}
+.icon_notify {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 0px;
+  bottom: 30%;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.o-message {
+  position: absolute;
+  top: 40%;
+  bottom: 10%;
+  right: 10%;
+}
+.o-notify-position {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+.o-notify-logo {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  width: 60px !important;
+  height: 60px !important;
+  background-image: url("/static/img/gif_omega.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 10001;
+}
+.o-notify-logo-big {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  z-index: 100;
+  background-color: #fff;
+  background-position: center;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  text-align: center;
+  font-size: 10em;
+  color: #ccc;
+}
+.o-notify-logo-big i {
+  margin-top: 10%;
+}
+.o-notify-target {
+  width: 0px;
+  height: 50%;
+  right: 0;
+  position: absolute;
+  background: #34b0df;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  text-align: left;
+}
+.o-notify-target span {
+  float: left;
+  display: none;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.o-notify-target-fail {
+  width: 0px;
+  height: 50%;
+  right: 0;
+  position: absolute;
+  background: #f00;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  text-align: left;
+}
+.o-notify-target-fail span {
+  float: left;
+  display: none;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.icon-notify {
+  color: #fff;
+  font-size: 5px;
+  text-align: right;
+  margin-left: 6px;
+}
+.o-layout-notify {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
+  background-color: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+.o-tags {
+  float: left;
+  color: #fff;
+}
+.o-tags-controller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.o-tags-container {
+  position: relative;
+}
+.o-information-container {
+  position: fixed;
+  right: 0;
+  top: 20%;
+  height: 30%;
+  width: 15%;
+  z-index: 100000;
+}
+.o-information-message {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  overflow: hidden;
+}
+.o-information-message-container {
+  background-color: #ddd;
+  border-radius: 5%;
+  position: absolute;
+  top: 0px;
+  height: 0px;
+  width: 100%;
+}
+.o-information-message-header {
+  border-bottom: 1px solid #fff;
+  text-align: left;
+  background-color: #eee;
+  height: 20%;
+  display: none;
+}
+.o-information-message-header i {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.o-information-message-header h4 {
+  margin-left: 2%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.o-information-message-body {
+  background-color: #008000;
+}
+.o-alert {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99999999999;
+}
+.o-alert-block {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.o-alert-block-layout {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.o-alert-dialog {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  background-color: #fff;
+  width: 400px;
+  border-radius: 2%;
+  display: block;
+  box-shadow: 10px 10px 5px rgba(51,51,51,0.2);
+  display: none;
+}
+.o-alert-dialog-header {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+.o-alert-dialog-header h3 {
+  margin: 5px;
+}
+.o-alert-dialog-header i {
+  margin-right: 5px;
+  color: #3b80ea;
+  font-size: 1.2em;
+}
+.o-alert-dialog-body {
+  margin: 5%;
+  min-height: 90px;
+  width: 90%;
+}
+.o-alert-dialog-footer {
+  border-top: 1px solid #ddd;
+  margin: 0;
+  width: 100%;
+}
+.o-alert-dialog-footer button {
+  margin: 5px;
+  float: right;
+}
+.o-notify-target {
+  height: 0px;
+  position: fixed;
+  bottom: 0;
+  right: 1%;
+  background-color: #fff;
+  width: 180px;
+  border: 2px solid #ddd;
+  z-index: 999999;
+}
+.o-notify-target .iconSuccess {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
+  font-size: 20px;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+}
+.o-notify-target .iconSuccess span {
+  border-radius: 50%;
+  background-color: #808080;
+  padding: 20px;
+}
+.o-notify-target-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-shadow: 10px 10px 15px rgba(51,51,51,0.2);
+}
+.o-notify-target-header {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  background-color: #6dace4;
+  color: #fff;
+  font-style: oblique;
+  font-weight: bold;
+}
+.o-notify-target-header h6 {
+  margin: 0 0 0 5px;
+}
+.o-notify-target-body {
+  width: 100%;
+  height: 160px;
+}
+.o-notify-target-body p {
+  margin: 5px;
+}
+.o-notify-target-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+}
+.o-notify-target-footer span {
+  background-color: #13ec35;
+  height: 100%;
+  margin: 0;
+  width: 0;
+}
+.o-confirm {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99999999999;
+}
+.o-confirm-block {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.o-confirm-block-layout {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.o-confirm-dialog {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  background-color: #fff;
+  width: 400px;
+  border-radius: 2%;
+  display: block;
+  box-shadow: 10px 10px 5px rgba(51,51,51,0.2);
+  display: none;
+}
+.o-confirm-dialog-body {
+  margin: 5%;
+  min-height: 90px;
+  width: 90%;
+  font-size: 1.6em;
+  padding-top: 10px;
+}
+.o-confirm-dialog-body i {
+  margin-right: 5px;
+  color: #3b80ea;
+  font-size: 1.2em;
+}
+.o-confirm-dialog-footer {
+  border-top: 1px solid #ddd;
+  margin: 0;
+  width: 100%;
+}
+.o-confirm-dialog-footer button {
+  margin: 5px;
+  float: right;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'img/favicon/favico.gif' %}">
+	<title>Login</title>
+	<link href="{% static 'utiles/bootstrap-3.3.6-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'utiles/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'utiles/font-awesome-animation/font-awesome-animation.css' %}">
+    <style type="text/css">
+    	body, html {
+		    height: 100%;
+		    background-repeat: no-repeat;
+		    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+		}
+
+		.card-container.card {
+		    max-width: 350px;
+		    padding: 40px 40px;
+		}
+
+		.btn {
+		    font-weight: 700;
+		    height: 36px;
+		    -moz-user-select: none;
+		    -webkit-user-select: none;
+		    user-select: none;
+		    cursor: default;
+		}
+        #contenedorlogin{
+            background: rgba(255,255,255,0.6);
+            border-radius: 7px 7px 7px 7px;
+            margin: auto;
+        }
+        input:hover{
+            background: rgba(255,255,255,0.5);
+            border:1px solid green;
+        }
+    </style>
+</head>
+<body>
+	<div class="container">
+        <div class="card card-container" id='contenedorlogin'>
+         	<center>
+         		<i class="fa fa-user btn btn-lg"></i>
+                <br><div class="btn btn-lg">Acceso Al Sistema</div><br>
+         	</center>   
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" method="POST" autocomplete="off">
+            	{% csrf_token %}
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Usuario" value="{{username}}" required autofocus autocomplete="off">
+                <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required autocomplete="off"></br>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                olvidaste la contraseña?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
+</body>
+</html>

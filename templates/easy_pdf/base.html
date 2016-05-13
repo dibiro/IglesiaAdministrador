@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title|default:"" }}</title>
+    {% block style_base %}
+        {% block layout_style %}
+          <style type="text/css">
+
+        html {
+            font-family: "Lato", "Helvetica", "sans-serif";
+            color: #333333;
+        }
+        p {
+            margin: 0 0 6px 0;
+            font-size: 11pt;
+            font-family: "Lato", "Helvetica", "sans-serif";
+        }
+        table {
+            line-height: 140%;
+            margin-bottom: 20px;
+        }
+            table.bordered {
+                border-top: 0.1pt solid #999999;
+                border-bottom: 0.1pt solid #999999;
+            }
+            tr, td, th { border: 1px solid black; }
+            th {
+                font-size: 10pt;
+                background-color: lightgrey;
+                border-bottom: 0.1pt solid #999999;
+                padding: 3px 0;
+                line-height: 1;
+                font-weight: bold;
+            }
+            td {
+                font-size: 10pt;
+                font-family: "Lato", "Helvetica", "sans-serif";
+                vertical-align: top;
+                padding: 3px 0;
+            }
+            td:last-child { padding-bottom: 0; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .bottom-10 { margin-bottom: 10px; }
+        .bottom-20 { margin-bottom: 20px; }
+        .header { color: #7f7f7f; }
+        .header p { font-size: 13px; line-height: 1.5em; }
+        .header-link { font-weight: bold; text-decoration: none; color: #4F81BD; font-size: 14px; }
+
+        .recipient { margin-left: 7cm; }
+        .main h1 {
+            margin: 18px 0 18px 0;
+            font-size: 250%;
+            font-weight: normal;
+            color: #4F81BD;
+        }
+        .main h2 {
+            margin: 18px 0 6px 0;
+            font-size: 180%;
+            font-weight: normal;
+        }
+        .info { border: 1px solid #4F81BD; padding: 10px; margin-top: 50px; margin-bottom: 50px; }
+        .info a { color: #4F81BD; text-decoration: none; }
+    </style>
+        {%endblock%}
+        {% block extra_style %}
+        {% endblock %}
+    {% endblock %}
+</head>
+<body>
+    <div>
+        {%block page_header%}
+        {%endblock page_header%}
+    </div>
+        {%block content%}
+        {%endblock%}
+    <div id="page-footer">
+        {%block page_foot%}
+            {% comment %}
+                <pdf:pagenumber />
+            {% endcomment %}
+        {%endblock%}
+    </div>
+</body>
+</html>
