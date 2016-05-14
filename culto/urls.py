@@ -4,6 +4,10 @@ from .views import *
 
 
 urlpatterns = patterns('',
-                       url(r'^$', login_required(Cronograma.as_view()), 
+                       url(r'^$', login_required(Cronograma.as_view()),
                        	   name='Culto'),
+                       url(r'^calendario/$',
+                       	   login_required(dicc_calendar), name="calendario"),
+                       url(r'^crear_culto/$',
+                       	   login_required(crear_culto), name="crear_culto")
                        )

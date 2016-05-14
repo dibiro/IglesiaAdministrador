@@ -10,19 +10,19 @@
 	</thead>
 	<tbody>
 		{% for x in calendario %}
-			{% if x.Lunes %}
+			{% if x.weekday == 0 %}
 				<tr>
 			{% endif %}
-				<th class="{% if x.culto %}success {% endif %}{% if x.evento %} success {% endif %}">
-					{{x.dia}}
-					{% if x.culto %}
-						<i class="fa fa-hospital-o culto" data-id="{{x.id_culto}}" aria-hidden="true"></i>
-					{% endif %}
-					{% if x.evento %}
-						<i class="fa fa-hospital-o evento" data-id="{{x.id_evento}}" aria-hidden="true"></i>
-					{% endif %}
-				</th>
-			{% if x.Lunes %}
+			<th class="{% if x.culto %}success {% endif %}{% if x.evento %} success {% endif %}">
+				{{x.dia}}
+				{% if x.culto %}
+					<i class="fa fa-hospital-o culto" data-id="{{x.id_culto}}" aria-hidden="true"></i>
+				{% endif %}
+				{% if x.evento %}
+					<i class="fa fa-hospital-o evento" data-id="{{x.id_evento}}" aria-hidden="true"></i>
+				{% endif %}
+			</th>
+			{% if x.weekday == 0 %}
 				</tr>
 			{% endif %}
 		{% endfor %}

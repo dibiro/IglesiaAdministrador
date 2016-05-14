@@ -11,9 +11,11 @@ Cronograma
         <div class="form-group col-xs-6">
           <label class="col-sm-4 col-xs-12">Año</label>
           <div class="col-sm-8 col-xs-12">
-            <select style="width:100%" class="form-control" name="libro" id="libro">
+            <select style="width:100%" class="form-control" name="year" id="year">
               {% for x in years %}
-                <option value="{{x}}" data-capitulos="{{x}}">{{x}}</option>
+                <option value="{{x}}" data-capitulos="{{x}}" {% if x == now.year %}
+                	selected 
+                {% endif %}>{{x}}</option>
               {% endfor %}
             </select>
           </div>
@@ -21,26 +23,42 @@ Cronograma
         <div class="form-group col-xs-6">
           <label class="col-sm-4 col-xs-12">Mes</label>
           <div class="col-sm-8 col-xs-12">
-            <select style="width:100%" class="form-control" name="capitulo" id="capitulo">
+            <select style="width:100%" class="form-control" name="mes" id="mes">
               {% for x in meses %}
-                <option value="{{x}}">{{x}}</option>
+                <option value="{{x}}" {% if x == now.month %}
+                	selected 
+                {% endif %}>{{x}}</option>
               {% endfor %}
             </select>
           </div>
         </div>
-  	    <div class="btn btn-info btn-lg col-xs-5 col-sm-5 col-md-offset-1 col-xs-offset-1" id="evento" > <i class="fa fa-plus" aria-hidden="true"></i> Evento</div>
-  	    <div class="btn btn-info btn-lg col-xs-5 col-sm-5 col-md-offset-1 col-xs-offset-1" id="culto" > <i class="fa fa-plus" aria-hidden="true"></i> Culto</div>
+  	    <div class="btn btn-info btn-lg col-xs-4 col-sm-4 col-md-offset-1 col-xs-offset-1" id="evento" data-toggle="modal" data-target="#crear_evento"> <i class="fa fa-plus" aria-hidden="true"></i> Evento</div>
+  	    <div class="btn btn-info btn-lg col-xs-4 col-sm-4 col-md-offset-2 col-xs-offset-2" id="culto" data-toggle="modal" data-target="#crear_culto"> <i class="fa fa-plus" aria-hidden="true"></i> Culto</div>
       </div>
       <div class="col-xs-12 col-sm-12">
 
       </div>
     </div>
-    <div class="col-sm-12 col-xs-12" id="calendario">
-		{% include "calendario.html" %}
+    <div class="col-sm-12 col-xs-12" style="margin-top:10px;">
+    	<table class="table table-bordered">
+			<thead>
+				<th>Lunes</th>
+				<th>Martes</th>
+				<th>Miercoles</th>
+				<th>Jueves</th>
+				<th>Viernes</th>
+				<th>Sabado</th>
+				<th>Domingo</th>
+			</thead>
+			<tbody id="calendario">
+				
+			</tbody>
+		</table>
     </div>
 
   </div>
-
+{% include "modal_crear_evento.html" %}
+{% include "modal_crear_culto.html" %}
 
 {% endblock %}
 {% block js %}
