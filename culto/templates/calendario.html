@@ -1,0 +1,30 @@
+<table class="table table-bordered">
+	<thead>
+		<th>Lunes</th>
+		<th>Martes</th>
+		<th>Miercoles</th>
+		<th>Jueves</th>
+		<th>Viernes</th>
+		<th>Sabado</th>
+		<th>Domingo</th>
+	</thead>
+	<tbody>
+		{% for x in calendario %}
+			{% if x.Lunes %}
+				<tr>
+			{% endif %}
+				<th class="{% if x.culto %}success {% endif %}{% if x.evento %} success {% endif %}">
+					{{x.dia}}
+					{% if x.culto %}
+						<i class="fa fa-hospital-o culto" data-id="{{x.id_culto}}" aria-hidden="true"></i>
+					{% endif %}
+					{% if x.evento %}
+						<i class="fa fa-hospital-o evento" data-id="{{x.id_evento}}" aria-hidden="true"></i>
+					{% endif %}
+				</th>
+			{% if x.Lunes %}
+				</tr>
+			{% endif %}
+		{% endfor %}
+	</tbody>
+</table>

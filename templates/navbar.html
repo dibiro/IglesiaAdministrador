@@ -15,7 +15,6 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{% url 'Biblia' %}">Biblia</a></li>
-        <li class=""><a href="#">Cronograma<span class="sr-only"></span></a></li>
         <li><a href="/Administrador/">Administrador</a></li>
         <!--<li><a href="{% url 'Hermanos' %}">Hermanos</a></li>-->
         <li class="dropdown">
@@ -24,7 +23,7 @@
             <li><a href="#">Espectador</a></li>
             <li><a href="#">Direccion</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Administrador y Gestios de cultos</a></li>
+            <li><a href="{% url 'Culto' %}">Gestios de cultos y eventos</a></li>
           </ul>
         </li>
       </ul>

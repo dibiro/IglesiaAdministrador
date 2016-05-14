@@ -1,0 +1,48 @@
+{% extends "princ.html"%}
+{% block title %}
+Cronograma
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="row" >
+    <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-12">
+        <div class="form-group col-xs-6">
+          <label class="col-sm-4 col-xs-12">Año</label>
+          <div class="col-sm-8 col-xs-12">
+            <select style="width:100%" class="form-control" name="libro" id="libro">
+              {% for x in years %}
+                <option value="{{x}}" data-capitulos="{{x}}">{{x}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="form-group col-xs-6">
+          <label class="col-sm-4 col-xs-12">Mes</label>
+          <div class="col-sm-8 col-xs-12">
+            <select style="width:100%" class="form-control" name="capitulo" id="capitulo">
+              {% for x in meses %}
+                <option value="{{x}}">{{x}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+  	    <div class="btn btn-info btn-lg col-xs-5 col-sm-5 col-md-offset-1 col-xs-offset-1" id="evento" > <i class="fa fa-plus" aria-hidden="true"></i> Evento</div>
+  	    <div class="btn btn-info btn-lg col-xs-5 col-sm-5 col-md-offset-1 col-xs-offset-1" id="culto" > <i class="fa fa-plus" aria-hidden="true"></i> Culto</div>
+      </div>
+      <div class="col-xs-12 col-sm-12">
+
+      </div>
+    </div>
+    <div class="col-sm-12 col-xs-12" id="calendario">
+		{% include "calendario.html" %}
+    </div>
+
+  </div>
+
+
+{% endblock %}
+{% block js %}
+  <script type="text/javascript" src="{% static 'js/Cronograma.js' %}"></script>
+{% endblock %}
