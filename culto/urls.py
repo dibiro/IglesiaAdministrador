@@ -9,5 +9,7 @@ urlpatterns = patterns('',
                        url(r'^calendario/$',
                        	   login_required(dicc_calendar), name="calendario"),
                        url(r'^crear_culto/$',
-                       	   login_required(crear_culto), name="crear_culto")
+                       	   login_required(crear_culto), name="crear_culto"),
+                       url(r'^get_culto/$',
+                       	   login_required(get_culto), name="get_culto"),
                        )

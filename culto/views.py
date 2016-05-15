@@ -92,3 +92,20 @@ def crear_culto(request):
     now = timezone.now()
     result = json.dumps({'year': now.year, 'month': now.month}, ensure_ascii=False)
     return HttpResponse(result, content_type='application/json; charset=utf-8')
+
+
+def get_culto(request):
+    culto = Cultos.objects.get(id=request.GET['id'])
+    dicc = {
+        'id': culto.id,
+        'Fecha': culto.fecha.strftime('%Y-%m-%d'),
+        'Direccion': culto.Direccion.id,
+        'Lectura': culto.lectura.id,
+        'Recolecion': culto.recolecion.id,
+        'Oracion': culto.oracion.id,
+        'Coros': culto.coros.id,
+        'Predicacion': culto.predicacion.id,
+        'tipos_de_cultos': culto.tipo.id,
+    }
+    result = json.dumps(dicc, ensure_ascii=False)
+    return HttpResponse(result, content_type='application/json; charset=utf-8')

@@ -18,10 +18,10 @@ function Calendario(year, mouth) {
     			};
     			texto += '">'+val.dia+' ';
     			if (val.culto=='1') {
-    				texto += ' <i class="fa fa-hospital-o culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
+    				texto += ' <i class="fa fa-hospital-o fa-5 culto" data-toggle="modal" data-target="#modificar_culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
     			};
     			if (val.evento=='1') {
-    				texto += ' <i class="fa fa-hospital-o evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
+    				texto += ' <i class="fa fa-hospital-o fa-5 evento" data-toggle="modal" data-target="#modificar_evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
     			};
     			texto += '</th>'
       			$('#calendario').html(texto);
@@ -32,10 +32,10 @@ function Calendario(year, mouth) {
     			};
     			texto += '">'+val.dia+' ';
     			if (val.culto=='1') {
-    				texto += ' <i class="fa fa-hospital-o culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
+    				texto += ' <i class="fa fa-hospital-o fa-5 culto" data-toggle="modal" data-target="#modificar_culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
     			};
     			if (val.evento=='1') {
-    				texto += ' <i class="fa fa-hospital-o evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
+    				texto += ' <i class="fa fa-hospital-o fa-5 evento" data-toggle="modal" data-target="#modificar_evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
     			};
     			texto += '</th></tr>'
       			$('#calendario').html(texto);
@@ -46,10 +46,10 @@ function Calendario(year, mouth) {
     			};
     			texto += '">'+val.dia+' ';
     			if (val.culto=='1') {
-    				texto += ' <i class="fa fa-hospital-o culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
+    				texto += ' <i class="fa fa-hospital-o fa-5 culto" data-toggle="modal" data-target="#modificar_culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
     			};
     			if (val.evento=='1') {
-    				texto += ' <i class="fa fa-hospital-o evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
+    				texto += ' <i class="fa fa-hospital-o fa-5 evento" data-toggle="modal" data-target="#modificar_evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
     			};
     			texto += '</th>'
       			$('#calendario').html(texto);
@@ -60,6 +60,7 @@ function Calendario(year, mouth) {
   .fail(function() {
   })
   .always(function() {
+    add_evento();
   });
 }
 
@@ -100,7 +101,46 @@ function crear_culto() {
   });
 }
 
+function get_culto(id) {
+    $.ajax({
+    url: 'get_culto/',
+    type: 'GET',
+    dataType: 'json',
+    data: {
+        'id': id
+    },
+  })
+  .done(function(data) {
+    $("#id_culto").val(data.id);
+    $("#Modificar_Fecha").val(data.Fecha);
+    $("#Modificar_Direccion").select2('val', data.Direccion);
+    $("#Modificar_Lectura").select2('val', data.Lectura);
+    $("#Modificar_Recolecion").select2('val', data.Recolecion);
+    $("#Modificar_Oracion").select2('val', data.Oracion);
+    $("#Modificar_Coros").select2('val', data.Coros);
+    $("#Modificar_Predicacion").select2('val', data.Predicacion);
+    $("#Modificar_tipos_de_cultos").select2('val', data.tipos_de_cultos);
+    $("#Modificar_Direccion").val(data.Direccion);
+    $("#Modificar_Lectura").val(data.Lectura);
+    $("#Modificar_Recolecion").val(data.Recolecion);
+    $("#Modificar_Oracion").val(data.Oracion);
+    $("#Modificar_Coros").val(data.Coros);
+    $("#Modificar_Predicacion").val(data.Predicacion);
+    $("#Modificar_tipos_de_cultos").val(data.tipos_de_cultos);
+  })
+  .fail(function() {
+  })
+  .always(function() {
+  });
+}
+
 $("#crear_culto_btn").click(function(event) {
     crear_culto();
     $('#crear_culto').modal('hide');
 });
+
+function add_evento() {
+    $(".culto").click(function(event) {
+        get_culto($(this).data('id'));
+    });
+}

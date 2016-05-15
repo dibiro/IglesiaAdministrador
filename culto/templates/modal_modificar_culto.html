@@ -1,0 +1,96 @@
+<div class="modal fade" id="modificar_culto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modificar Culto</h4>
+        <div class="modal-body">
+          </div>
+          <input type="hidden" id="id_culto">
+          <div class="modal-body">
+            <div class="form-group col-xs-12">
+              <label class="col-sm-4 col-xs-12">Fecha</label>
+              <div class="col-sm-8 col-xs-12">
+                <input type="text" class="datetimepicker form-control" id="Modificar_Fecha" name="Modificar_Fecha" placeholder="Fecha" required>
+              </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label class="col-sm-4 col-xs-12">Direccion</label>
+              <div class="col-sm-8 col-xs-12">
+                <select required style="width:100%" class="form-control" name="Modificar_Direccion" id="Modificar_Direccion">
+                  {% for x in hermanos %}
+                    <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label class="col-sm-4 col-xs-12">Lectura</label>
+              <div class="col-sm-8 col-xs-12">
+                <select required style="width:100%" class="form-control" name="Modificar_Lectura" id="Modificar_Lectura">
+                  {% for x in hermanos %}
+                    <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label class="col-sm-4 col-xs-12">Recolecion</label>
+              <div class="col-sm-8 col-xs-12">
+                <select required style="width:100%" class="form-control" name="Modificar_Recolecion" id="Modificar_Recolecion">
+                  {% for x in hermanos %}
+                    <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label class="col-sm-4 col-xs-12">Oracion</label>
+              <div class="col-sm-8 col-xs-12">
+                <select required style="width:100%" class="form-control" name="Modificar_Oracion" id="Modificar_Oracion">
+                  {% for x in hermanos %}
+                    <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label class="col-sm-4 col-xs-12">Coros</label>
+              <div class="col-sm-8 col-xs-12">
+                <select required style="width:100%" class="form-control" name="Modificar_Coros" id="Modificar_Coros">
+                  {% for x in hermanos %}
+                    <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label class="col-sm-4 col-xs-12">Predicacion</label>
+              <div class="col-sm-8 col-xs-12">
+                <select required style="width:100%" class="form-control" name="Modificar_Predicacion" id="Modificar_Predicacion">
+                  {% for x in hermanos %}
+                    <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-xs-12">
+              <label class="col-sm-4 col-xs-12">Tipos De Cultos</label>
+              <div class="col-sm-8 col-xs-12">
+                <select required style="width:100%" class="form-control" name="Modificar_tipos_de_cultos" id="Modificar_tipos_de_cultos">
+                  {% for x in tipos_de_cultos %}
+                    <option value="{{x.id}}">{{x.nombre}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-info" id="Modificar_culto_btn">Modificar</button>
+      </div>
+    </div>
+  </div>
+</div>
