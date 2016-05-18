@@ -39,16 +39,16 @@ Cronograma
 
       </div>
     </div>
-    <div class="col-sm-12 col-xs-12" style="margin-top:10px;">
+    <div class="col-sm-12 col-xs-12 col-md-offset-1 col-md-10" style="margin-top:20px;">
     	<table class="table table-bordered">
 			<thead>
-				<th>Lunes</th>
-				<th>Martes</th>
-				<th>Miercoles</th>
-				<th>Jueves</th>
-				<th>Viernes</th>
-				<th>Sabado</th>
-				<th>Domingo</th>
+				<th>L</th>
+				<th>M</th>
+				<th>M</th>
+				<th>J</th>
+				<th>V</th>
+				<th>S</th>
+				<th>D</th>
 			</thead>
 			<tbody id="calendario">
 				
@@ -57,6 +57,7 @@ Cronograma
     </div>
 
   </div>
+{% include "modal_visualizar_eventos.html" %}
 {% include "modal_crear_evento.html" %}
 {% include "modal_crear_culto.html" %}
 {% include "modal_modificar_culto.html" %}

@@ -2,6 +2,7 @@ from django.shortcuts import render_to_response, HttpResponse
 from django.views.generic import TemplateView
 from django.template import RequestContext
 from .models import *
+from biblia.models import *
 from hermanos.models import *
 from django.utils import timezone
 import json
@@ -16,8 +17,6 @@ def dicc_calendar(request):
     primera_columna = True
     cultos = Cultos.objects.filter(fecha__year=year, fecha__month=month).order_by('fecha')
     eventos = Eventos.objects.filter(fecha__year=year, fecha__month=month).order_by('fecha')
-    if_culto = Cultos.objects.filter(fecha__year=year, fecha__month=month).exists()
-    if_evento = Eventos.objects.filter(fecha__year=year, fecha__month=month).exists()
     for x in xrange(1, mes.day + 1):
         dicc = {}
         dia = timezone.datetime(year, month, x)
@@ -28,30 +27,20 @@ def dicc_calendar(request):
                         "dia": ""
                     }
                     dicc['weekday'] = y
-                    dicc['culto'] = 0
-                    dicc['evento'] = 0
+                    dicc['class'] = '"'
                     calendario.append(dicc)
             primera_columna = False
         dicc = {
-            "dia": dia.day
+            "dia": dia.day,
+            "class": '"'
         }
         for x in cultos:
             if x.fecha.day == dia.day:
-                dicc['id_culto'] = x.id
-                dicc['culto'] = 1
-            else:
-                dicc['culto'] = 0
+                dicc['class'] = 'success eventos" data-toggle="modal" data-target="#visulizar"'
         for x in eventos:
             if x.fecha.day == dia.day:
-                dicc['id_evento'] = x.id
-                dicc['evento'] = 1
-            else:
-                dicc['evento'] = 0
+                dicc['class'] = 'success eventos" data-toggle="modal" data-target="#visulizar"'
         dicc['weekday'] = dia.weekday()
-        if not if_culto:
-            dicc['culto'] = 0
-        if not if_evento:
-            dicc['evento'] = 0
         calendario.append(dicc)
     result = json.dumps(calendario, ensure_ascii=False)
     return HttpResponse(result, content_type='application/json; charset=utf-8')
@@ -109,3 +98,68 @@ def get_culto(request):
     }
     result = json.dumps(dicc, ensure_ascii=False)
     return HttpResponse(result, content_type='application/json; charset=utf-8')
+
+
+def get_eventos(request):
+    cultos = Cultos.objects.filter(fecha__year=request.GET['year'], fecha__month=request.GET['mouth'], fecha__day=request.GET['day'])
+    eventos = Eventos.objects.filter(fecha__year=request.GET['year'], fecha__month=request.GET['mouth'], fecha__day=request.GET['day'])
+    dicc = {}
+    lista = []
+    for x in cultos:
+        dicc = {
+            "id": x.id,
+            "direccion": x.Direccion.nombre + ' ' + x.Direccion.apellido,
+            "nombre": x.tipo.nombre,
+            "tipo": '1'
+        }
+        lista.append(dicc)
+    for x in eventos:
+        dicc = {
+            "id": x.id,
+            "nombre": x.nombre,
+            "descripcion": x.descripcion,
+            "hora": x.hora.strftime('%H-%M'),
+            "encargado": x.encargado.nombre + ' ' + x.encargado.apellido,
+            "tipo": '2'
+        }
+        lista.append(dicc)
+    result = json.dumps(lista, ensure_ascii=False)
+    return HttpResponse(result, content_type='application/json; charset=utf-8')
+
+
+class Direccion(TemplateView):
+    template_name = "direccion_de_culto.html"
+
+    def get(self, request, *args, **kwargs):
+        now = timezone.now()
+        cultos = Cultos.objects.filter(fecha__year=now.year, fecha__month=now.month, fecha__day=now.day, Direccion__user=request.user)
+        eventos = Eventos.objects.filter(fecha__year=now.year, fecha__month=now.month, fecha__day=now.day, encargado__user=request.user)
+        mensaje = 'Hoy No hay Cultos o Eventos donde seas Director'
+        for x in cultos:
+            mensaje = ''
+        for x in eventos:
+            mensaje = ''
+        return render_to_response(self.template_name, locals(), context_instance=RequestContext(request))
+
+
+class DirigirCulto(TemplateView):
+    template_name = "DirigirCulto.html"
+
+    def get(self, request, pk, *args, **kwargs):
+        now = timezone.now()
+        cultos = Cultos.objects.filter(id=pk, Direccion__user=request.user)
+        mensaje = 'No eres director de este culto'
+        for x in cultos:
+            mensaje = ''
+        libros = Libros.objects.all()
+        lista = []
+        for x in xrange(1,51):
+            lista.append(x)
+        genesis = Versiculos.objects.filter(libro=1, capitulo=1).order_by('versiculo')
+        aux = 0
+        lista_versiculos = []
+        for x in genesis:
+            lista_versiculos.append(x.versiculo)
+            if x.versiculo > aux:
+                aux = x.versiculo
+        return render_to_response(self.template_name, locals(), context_instance=RequestContext(request))

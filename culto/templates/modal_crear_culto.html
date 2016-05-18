@@ -17,6 +17,7 @@
               <label class="col-sm-4 col-xs-12">Direccion</label>
               <div class="col-sm-8 col-xs-12">
                 <select required style="width:100%" class="form-control" name="Direccion" id="Direccion">
+                  <option value=""></option>
                   {% for x in hermanos %}
                     <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
                   {% endfor %}
@@ -27,6 +28,7 @@
               <label class="col-sm-4 col-xs-12">Lectura</label>
               <div class="col-sm-8 col-xs-12">
                 <select required style="width:100%" class="form-control" name="Lectura" id="Lectura">
+                  <option value=""></option>
                   {% for x in hermanos %}
                     <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
                   {% endfor %}
@@ -37,6 +39,7 @@
               <label class="col-sm-4 col-xs-12">Recolecion</label>
               <div class="col-sm-8 col-xs-12">
                 <select required style="width:100%" class="form-control" name="Recolecion" id="Recolecion">
+                  <option value=""></option>
                   {% for x in hermanos %}
                     <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
                   {% endfor %}
@@ -47,6 +50,7 @@
               <label class="col-sm-4 col-xs-12">Oracion</label>
               <div class="col-sm-8 col-xs-12">
                 <select required style="width:100%" class="form-control" name="Oracion" id="Oracion">
+                  <option value=""></option>
                   {% for x in hermanos %}
                     <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
                   {% endfor %}
@@ -57,6 +61,7 @@
               <label class="col-sm-4 col-xs-12">Coros</label>
               <div class="col-sm-8 col-xs-12">
                 <select required style="width:100%" class="form-control" name="Coros" id="Coros">
+                  <option value=""></option>
                   {% for x in hermanos %}
                     <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
                   {% endfor %}
@@ -67,6 +72,7 @@
               <label class="col-sm-4 col-xs-12">Predicacion</label>
               <div class="col-sm-8 col-xs-12">
                 <select required style="width:100%" class="form-control" name="Predicacion" id="Predicacion">
+                  <option value=""></option>
                   {% for x in hermanos %}
                     <option value="{{x.id}}">{{x.nombre}} {{x.apellido}}</option>
                   {% endfor %}
@@ -77,6 +83,7 @@
               <label class="col-sm-4 col-xs-12">Tipos De Cultos</label>
               <div class="col-sm-8 col-xs-12">
                 <select required style="width:100%" class="form-control" name="tipos_de_cultos" id="tipos_de_cultos">
+                  <option value=""></option>
                   {% for x in tipos_de_cultos %}
                     <option value="{{x.id}}">{{x.nombre}}</option>
                   {% endfor %}

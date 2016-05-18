@@ -6,6 +6,6 @@ from django.contrib.auth.decorators import login_required
 from .views import *
 
 
-urlpatterns = patterns('',
-                       url(r'^$', Index.as_view(), name='Hermanos'),
-                       )
+urlpatterns = [
+               url(r'^$', Index.as_view(), name='Hermanos'),
+]

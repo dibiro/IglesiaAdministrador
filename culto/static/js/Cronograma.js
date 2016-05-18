@@ -1,4 +1,14 @@
-$("select").select2({dropdownAutoWidth: 'true'});
+$('.datetimepicker').datetimepicker({format: "YYYY-MM-DD",locale: 'es',});
+$("select").select2();
+
+function add_evento() {
+    $(".culto").click(function(event) {
+        get_culto($(this).data('id'));
+    });
+    $(".eventos").click(function(event) {
+        get_eventos($("#year").val(), $("#mes").val(), $(this).data('dia'));
+    });
+}
 
 function Calendario(year, mouth) {
   $.ajax({
@@ -11,56 +21,46 @@ function Calendario(year, mouth) {
     $('#calendario').empty();
     var texto = '';
     $.each(data, function(index, val) {
-    		if (val.weekday=='0') {
-    			texto += '<tr><th class="';
-    			if (val.culto=='1' || val.evento=='1') {
-    				texto += 'success';
-    			};
-    			texto += '">'+val.dia+' ';
-    			if (val.culto=='1') {
-    				texto += ' <i class="fa fa-hospital-o fa-5 culto" data-toggle="modal" data-target="#modificar_culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
-    			};
-    			if (val.evento=='1') {
-    				texto += ' <i class="fa fa-hospital-o fa-5 evento" data-toggle="modal" data-target="#modificar_evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
-    			};
-    			texto += '</th>'
-      			$('#calendario').html(texto);
-    		}else if (val.weekday=='6') {
-    			texto += '<th class="';
-    			if (val.culto=='1' || val.evento=='1') {
-    				texto += 'success';
-    			};
-    			texto += '">'+val.dia+' ';
-    			if (val.culto=='1') {
-    				texto += ' <i class="fa fa-hospital-o fa-5 culto" data-toggle="modal" data-target="#modificar_culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
-    			};
-    			if (val.evento=='1') {
-    				texto += ' <i class="fa fa-hospital-o fa-5 evento" data-toggle="modal" data-target="#modificar_evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
-    			};
-    			texto += '</th></tr>'
-      			$('#calendario').html(texto);
-    		}else {
-    			texto += '<th class="';
-    			if (val.culto=='1' || val.evento=='1') {
-    				texto += 'success';
-    			};
-    			texto += '">'+val.dia+' ';
-    			if (val.culto=='1') {
-    				texto += ' <i class="fa fa-hospital-o fa-5 culto" data-toggle="modal" data-target="#modificar_culto" data-id="'+val.id_culto+'" aria-hidden="true"></i>';
-    			};
-    			if (val.evento=='1') {
-    				texto += ' <i class="fa fa-hospital-o fa-5 evento" data-toggle="modal" data-target="#modificar_evento" data-id="'+val.id_evento+'" aria-hidden="true"></i>';
-    			};
-    			texto += '</th>'
-      			$('#calendario').html(texto);
-    		};
-				
+      if (val.weekday=='0') {
+        texto += '<tr><th class="'+val.class+' data-dia="'+val.dia+'">'+val.dia+'</th>';
+      }else if (val.weekday=='6') {
+        texto += '<th class="'+val.class+' data-dia="'+val.dia+'">'+val.dia+'</th>tr';
+      }else {
+        texto += '<th class="'+val.class+' data-dia="'+val.dia+'">'+val.dia+'</th>';
+      };
+        $('#calendario').html(texto);               
     });
   })
   .fail(function() {
   })
   .always(function() {
     add_evento();
+  });
+}
+
+function get_eventos(year, mouth, day) {
+  $.ajax({
+    url: 'get_eventos/',
+    type: 'GET',
+    dataType: 'json',
+    data: {year: year, mouth: mouth, day: day},
+  })
+  .done(function(data) {
+    $('#visulizar_eventos').empty();
+    $.each(data, function(index, val) {
+      if (val.tipo=='1') {
+        $('#visulizar_eventos').append('<div class="col-sm-6 col-xs-12 culto panel panel-info" data-toggle="modal" data-target="#modificar_culto" data-id="'+val.id+'"><div class="panel-heading">'+val.nombre+'</div><div class="panel-body"><p>'+val.direccion+'</p></div></div>')
+      }else {
+        $('#visulizar_eventos').append('<div class="col-sm-6 col-xs-12 evento panel panel-success" data-toggle="modal" data-target="#modificar_evento" data-id="'+val.id+'"><div class="panel-heading">'+val.nombre+'</div><div class="panel-body"><p>'+val.encargado+'</p><p>'+val.descripcion+'</p><p>'+val.hora+'</p></div></div>')
+      };
+    });
+  })
+  .fail(function() {
+  })
+  .always(function() {
+    add_evento();
+    $('#dia_vizualisado').html(day+'/'+mouth+'/'+year);               
+    
   });
 }
 
@@ -72,8 +72,6 @@ $("#mes").change(function(event) {
 });
 
 Calendario($("#year").val(), $("#mes").val());
-
-$('.datetimepicker').datetimepicker({format: "YYYY-MM-DD",locale: 'es',});
 
 function crear_culto() {
     $.ajax({
@@ -93,7 +91,7 @@ function crear_culto() {
     beforeSend: function(xhr) {xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));},
   })
   .done(function(data) {
-	Calendario(data.year, data.month)
+    Calendario(data.year, data.month)
   })
   .fail(function() {
   })
@@ -138,9 +136,3 @@ $("#crear_culto_btn").click(function(event) {
     crear_culto();
     $('#crear_culto').modal('hide');
 });
-
-function add_evento() {
-    $(".culto").click(function(event) {
-        get_culto($(this).data('id'));
-    });
-}

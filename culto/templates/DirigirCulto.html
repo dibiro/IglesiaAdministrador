@@ -1,0 +1,91 @@
+{% extends "princ.html"%}
+{% block title %}
+Dirigir
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<div class="row">
+  
+  <div class="col-sm-12 col-md-8 col-xs-12">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#Texto" aria-controls="Texto" role="tab" data-toggle="tab">Texto Biblico</a></li>
+      <li role="presentation"><a href="#Invitar" aria-controls="Invitar" role="tab" data-toggle="tab">Invitar</a></li>
+      <li role="presentation"><a href="#Coros" aria-controls="Coros" role="tab" data-toggle="tab">Coros</a></li>
+      <li role="presentation"><a href="#Anuncios" aria-controls="Anuncios" role="tab" data-toggle="tab">Anuncios</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="Texto">
+        <div class="col-xs-12 col-md-6">
+          <div class="col-xs-12 col-sm-6 col-md-12 ">
+            <div class="form-group col-xs-6 col-md-12">
+              <label class="col-sm-4 col-xs-12">Libro</label>
+              <div class="col-sm-8 col-xs-12 col-md-12">
+                <select style="width:100%" class="form-control" name="libro" id="libro">
+                  {% for x in libros %}
+                    <option value="{{x.id}}" data-capitulos="{{x.capitulos}}">{{x.nombre}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-xs-6 col-md-12">
+              <label class="col-sm-4 col-xs-12">Capitulo</label>
+              <div class="col-sm-8 col-xs-12 col-md-12">
+                <select style="width:100%" class="form-control" name="capitulo" id="capitulo">
+                  {% for x in lista %}
+                    <option value="{{x}}">{{x}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-12">
+            <div class="form-group col-xs-6 col-md-12">
+              <label class="col-sm-4 col-xs-12">Desde</label>
+              <div class="col-sm-8 col-xs-12 col-md-12">
+                <select style="width:100%" class="form-control" name="Desde" id="Desde">
+                  {% for x in lista_versiculos %}
+                    <option value="{{x}}">{{x}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-xs-6 col-md-12">
+              <label class="col-sm-4 col-xs-12">Hasta</label>
+              <div class="col-sm-8 col-xs-12 col-md-12">
+                <select style="width:100%" class="form-control" name="Hasta" id="Hasta">
+                  {% for x in lista_versiculos %}
+                    <option value="{{x}}">{{x}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="btn btn-info btn-lg btn-block col-xs-12" id="filtrar" >Filtrar</div>
+        </div>
+        <div class="col-sm-12 col-xs-12 col-md-6" id="contenedor">
+          <ul class="list-group" id="contenido">
+            {% for x in genesis %}
+              <li class="list-group-item">
+                <span class="badge">{{x.versiculo}}</span>
+                {{x.texto}}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="Invitar">...</div>
+      <div role="tabpanel" class="tab-pane fade" id="Coros">Proximamente</div>
+      <div role="tabpanel" class="tab-pane fade" id="Anuncios">...</div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+{% block js %}
+  <script type="text/javascript" src="{% static 'js/Dirigir.js' %}"></script>
+{% endblock %}
