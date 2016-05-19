@@ -1,0 +1,15 @@
+{% extends "princ.html"%}
+{% block title %}
+Espectar
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<input type="hidden" id="id_culto" value="{{pk}}">
+<div id="contenedor">
+  
+</div>
+
+{% endblock %}
+{% block js %}
+  <script type="text/javascript" src="{% static 'js/Espectador.js' %}"></script>
+{% endblock %}

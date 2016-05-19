@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from hermanos.models import Hermanos
+from biblia.models import Libros
 
 
 class TipoDeCulto(models.Model):
@@ -43,3 +44,59 @@ class Eventos(models.Model):
     def __unicode__(self):
         return '%s' % self.nombre
 
+
+class Comentarios(models.Model):
+    fecha = models.DateTimeField(auto_now=True)
+    hermano = models.ForeignKey(Hermanos)
+    comentario = models.TextField()
+    culto = models.ForeignKey(Cultos)
+
+    class Meta:
+        db_table = 'comentarios'
+
+    def __unicode__(self):
+        return '%s - %s - %s' % (self.fecha, self.culto, self.hermano)
+
+
+class EstadoDelCulto(models.Model):
+    culto = models.OneToOneField(Cultos)
+    versiculos = models.BooleanField(default=False)
+    invitacion = models.BooleanField(default=False)
+    anuncio = models.BooleanField(default=False)
+    coros = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'estado_del_culto'
+
+    def __unicode__(self):
+        return '%s' % self.culto
+
+
+class VersiculoDelCulto(models.Model):
+    culto = models.OneToOneField(Cultos)
+    libro = models.ForeignKey(Libros)
+    capitulo = models.PositiveIntegerField()
+    desde = models.PositiveIntegerField()
+    hasta = models.PositiveIntegerField()
+
+    class Meta:
+        db_table = 'versiculo_del_culto'
+
+    def __unicode__(self):
+        return '%s' % self.culto
+
+
+class IvitacionDelCulto(models.Model):
+    culto = models.OneToOneField(Cultos)
+    Direccion = models.BooleanField(default=False)
+    lectura = models.BooleanField(default=False)
+    recolecion = models.BooleanField(default=False)
+    oracion = models.BooleanField(default=False)
+    coros = models.BooleanField(default=False)
+    predicacion = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'invitacion_del_culto'
+
+    def __unicode__(self):
+        return '%s' % self.culto

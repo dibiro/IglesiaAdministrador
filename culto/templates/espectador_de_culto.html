@@ -1,0 +1,23 @@
+{% extends "princ.html"%}
+{% block title %}
+Espectador
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="row" >
+  <div class="col-xs-12">
+    {% for x in cultos %}
+		<a href="{% url 'EspectarCulto' x.id %}">
+    	  <div class="col-sm-6 col-md-3 col-xs-6 culto panel panel-info" ><div class="panel-heading">{{x.tipo.nombre}}</div><div class="panel-body"><p>Culto</p></div></div>
+		</a>
+    {% endfor %}
+    {% for x in eventos %}
+      
+    {% endfor %}
+    <h1>{{mensaje}}</h1>
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+{% endblock %}

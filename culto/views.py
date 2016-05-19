@@ -78,6 +78,7 @@ def crear_culto(request):
         tipo_id=request.POST['tipo'],
     )
     culto.save()
+    estado = EstadoDelCulto(culto=culto).save()
     now = timezone.now()
     result = json.dumps({'year': now.year, 'month': now.month}, ensure_ascii=False)
     return HttpResponse(result, content_type='application/json; charset=utf-8')
@@ -162,4 +163,96 @@ class DirigirCulto(TemplateView):
             lista_versiculos.append(x.versiculo)
             if x.versiculo > aux:
                 aux = x.versiculo
+        return render_to_response(self.template_name, locals(), context_instance=RequestContext(request))
+
+
+def buscar_versiculos_por_capitulo(request):
+    numero_capitulos = 0
+    capitulo = Versiculos.objects.filter(libro=request.GET['libro']).order_by('capitulo')
+    for x in capitulo:
+        if x.capitulo > numero_capitulos:
+            numero_capitulos = x.capitulo
+    libro = Versiculos.objects.filter(libro=request.GET['libro'], capitulo=request.GET['capitulo']).order_by('versiculo')
+    aux = 0
+    lista_versiculos = []
+    dicc = {}
+    for x in libro:
+        if x.versiculo > aux:
+            aux = x.versiculo
+        dicc = {
+            'texto': x.texto,
+            'versiculo': x.versiculo
+        }
+        lista_versiculos.append(dicc)
+        dicc = {}
+    dicc = {
+        'versiculos': lista_versiculos,
+        'numero_versiculos': aux,
+        'numero_capitulos': numero_capitulos
+    }
+    result = json.dumps(dicc, ensure_ascii=False)
+    return HttpResponse(result, content_type='application/json; charset=utf-8')
+
+
+def buscar_versiculos_por_filtrado(request):
+    libro = Versiculos.objects.filter(libro=request.GET['libro'], capitulo=request.GET['capitulo']).order_by('versiculo')
+    aux = 0
+    lista_versiculos = []
+    dicc = {}
+    for x in libro:
+        if x.versiculo > aux:
+            aux = x.versiculo
+        if x.versiculo >= int(request.GET['desde']) and x.versiculo <= int(request.GET['hasta']):
+            dicc = {
+                'texto': x.texto,
+                'versiculo': x.versiculo
+            }
+            lista_versiculos.append(dicc)
+        dicc = {}
+    estado = EstadoDelCulto.objects.get(culto=request.GET['id'])
+    estado.versiculos = True
+    estado.invitacion = False
+    estado.anuncio = False
+    estado.coros = False
+    estado.save()
+    if VersiculoDelCulto.objects.filter(culto=request.GET['id']).exists():
+        versiculo = VersiculoDelCulto.objects.get(culto=request.GET['id'])
+        versiculo.libro = request.GET['libro']
+        versiculo.capitulo = request.GET['capitulo']
+        versiculo.desde = request.GET['desde']
+        versiculo.hasta = request.GET['hasta']
+        versiculo.save()
+    else:
+        versiculo = VersiculoDelCulto(
+            culto_id=request.GET['id'],
+            libro_id=request.GET['libro'],
+            capitulo=request.GET['capitulo'],
+            desde=request.GET['desde'],
+            hasta=request.GET['hasta']
+        )
+        versiculo.save()
+    result = json.dumps(lista_versiculos, ensure_ascii=False)
+    return HttpResponse(result, content_type='application/json; charset=utf-8')
+
+
+class Espectador(TemplateView):
+    template_name = "espectador_de_culto.html"
+
+    def get(self, request, *args, **kwargs):
+        now = timezone.now()
+        cultos = Cultos.objects.filter(fecha__year=now.year, fecha__month=now.month, fecha__day=now.day)
+        eventos = Eventos.objects.filter(fecha__year=now.year, fecha__month=now.month, fecha__day=now.day)
+        mensaje = 'Hoy No hay Cultos'
+        for x in cultos:
+            mensaje = ''
+        for x in eventos:
+            mensaje = ''
+        return render_to_response(self.template_name, locals(), context_instance=RequestContext(request))
+
+
+class EspectarCulto(TemplateView):
+    template_name = "EspectarCulto.html"
+
+    def get(self, request, pk, *args, **kwargs):
+        cultos = Cultos.objects.filter(id=pk)
         return render_to_response(self.template_name, locals(), context_instance=RequestContext(request))
