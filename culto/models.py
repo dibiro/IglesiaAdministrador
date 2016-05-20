@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from hermanos.models import Hermanos
-from biblia.models import Libros
+from biblia.models import Libros, Versiculos
 
 
 class TipoDeCulto(models.Model):
@@ -78,6 +78,7 @@ class VersiculoDelCulto(models.Model):
     capitulo = models.PositiveIntegerField()
     desde = models.PositiveIntegerField()
     hasta = models.PositiveIntegerField()
+    selecionado = models.ForeignKey(Versiculos, blank=True, null=True)
 
     class Meta:
         db_table = 'versiculo_del_culto'

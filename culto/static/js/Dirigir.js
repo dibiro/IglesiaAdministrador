@@ -23,7 +23,7 @@ function buscar_versiculos_por_capitulo(libro, capitulo, iflibro) {
   .done(function(data) {
     $('#contenido').empty();
     $.each(data.versiculos, function(index, val) {
-      $('#contenido').append('<li class="list-group-item"><span class="badge">'+val.versiculo+'</span>'+val.texto+'</li>');
+      $('#contenido').append('<li class="list-group-item versiculos" data-id="'+val.id+'"><span class="badge">'+val.versiculo+'</span>'+val.texto+'</li>');
     });
     if (iflibro) {
       llenar_select('capitulo', 1, data.numero_capitulos, '1');
@@ -73,3 +73,31 @@ $('#capitulo').change(function(event) {
 $('#filtrar').click(function(event) {
   buscar_versiculos_por_filtrado();
 });
+
+$(window).on('resize', function(event) {
+  $("#contenedor").css("height", window.innerHeight-$("nav").height()-100 -$("div_1").height() + "px");
+  $("#chat").css("height", window.innerHeight-$("nav").height() + "px");
+});
+  $("#contenedor").css("height", window.innerHeight-$("nav").height()-100 -$("div_1").height() + "px");
+  $("#chat").css("height", window.innerHeight-$("nav").height() + "px");
+
+function seleccionar_versiculo(id) {
+  $.ajax({
+    url: '/Culto/seleccionar_versiculo/',
+    type: 'GET',
+    dataType: 'json',
+    data: {id: id, id_culto: $('#id_culto').val()},
+  })
+  .done(function(data) {
+  })
+  .fail(function() {
+  })
+  .always(function() {
+  });
+}
+
+function add_evento() {
+  $('.versiculos').click(function(event) {
+    seleccionar_versiculo($(this).data('id'))
+  });
+}

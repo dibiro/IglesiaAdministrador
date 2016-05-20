@@ -1,0 +1,50 @@
+.chat-input-container{
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+	height: 30px;
+}
+.chat-input{
+	border:none;
+	width: calc( 100% - 30px );
+	border-radius: 5px;
+}
+.chat-input:focus{
+	border:none;
+	border-radius: 5px;
+	box-shadow: none;
+}
+.chat-send-icon{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: white;
+	float: right;
+	color: #E2DA96;
+	padding: 3px 3px 0px 0px;
+	text-align: center;
+}
+.chat-container{
+	position: absolute;
+	bottom:50px;
+	left: 0px;
+	width: 100%;
+	min-height: 30px;
+}
+.chat-layout{
+	padding-right:10px;
+	background-color:#5BA2DE;
+}
+.chat{
+	background-color: white;
+	min-height: 40px;
+	width: 90%;
+	border-radius: 10px;
+	margin: 5px;
+}
+.my-message{
+	float:right;
+}
+.other-message{
+	float:left;
+}

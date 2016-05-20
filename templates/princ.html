@@ -14,29 +14,28 @@
         {% endblock %}
     </title>
     <link rel="stylesheet" type="text/css" href="{% static 'utiles/bootstrap/css/bootstrap.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'utiles/Materialicon/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'utiles/animate.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'utiles/select2-4.0.2/select2.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'utiles/font-awesome/css/font-awesome.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'utiles/font-awesome-animation/font-awesome-animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'utiles/omega-notify/omega-notify.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'utiles/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/jquery.min.js' %}"></script>
     {% include "navbar.html" %}
     </head>
     <body class="">
-    {% csrf_token %}
-        {% block content %}
+        {% csrf_token %}
+            {% block content %}
+
+            {% endblock %}
+        <script type="text/javascript" src="{% static 'utiles/bootstrap/js/bootstrap.js' %}"></script>
+        <script type="text/javascript" src="{% static 'utiles/select2-4.0.2/select2.js' %}"></script>
+        <script type="text/javascript" src="{% static 'utiles/bootstrap-datetimepicker/js/moment.js' %}"></script>
+        <script type="text/javascript" src="{% static 'utiles/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'utiles/omega-notify/omega-notify.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        {% block js %}
 
         {% endblock %}
-    <script type="text/javascript" src="{% static 'utiles/bootstrap/js/bootstrap.js' %}"></script>
-    <script type="text/javascript" src="{% static 'utiles/select2-4.0.2/select2.js' %}"></script>
-    <script type="text/javascript" src="{% static 'utiles/bootstrap-datetimepicker/js/moment.js' %}"></script>
-    <script type="text/javascript" src="{% static 'utiles/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'utiles/omega-notify/omega-notify.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-    {% block js %}
-
-    {% endblock %}
     </body>
 </html>
 
