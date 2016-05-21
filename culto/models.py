@@ -79,12 +79,14 @@ class VersiculoDelCulto(models.Model):
     desde = models.PositiveIntegerField()
     hasta = models.PositiveIntegerField()
     selecionado = models.ForeignKey(Versiculos, blank=True, null=True)
+    todos = models.BooleanField()
+    fecha_modificado = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = 'versiculo_del_culto'
 
     def __unicode__(self):
-        return '%s' % self.culto
+        return '%s - %s' % (self.culto, self.selecionado)
 
 
 class IvitacionDelCulto(models.Model):
@@ -95,6 +97,7 @@ class IvitacionDelCulto(models.Model):
     oracion = models.BooleanField(default=False)
     coros = models.BooleanField(default=False)
     predicacion = models.BooleanField(default=False)
+    fecha_modificado = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = 'invitacion_del_culto'

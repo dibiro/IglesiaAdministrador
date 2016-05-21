@@ -81,7 +81,8 @@ def crear_culto(request):
         tipo_id=request.POST['tipo'],
     )
     culto.save()
-    estado = EstadoDelCulto(culto=culto).save()
+    estado = EstadoDelCulto(culto=culto)
+    estado.save()
     now = timezone.now()
     result = json.dumps({'year': now.year, 'month': now.month},
                         ensure_ascii=False)
@@ -164,12 +165,12 @@ class DirigirCulto(TemplateView):
     def get(self, request, pk, *args, **kwargs):
         now = timezone.now()
         cultos = Cultos.objects.filter(id=pk, Direccion__user=request.user)
-        mensaje = 'No eres director de este culto'
+        mensaje = True
         for x in cultos:
-            mensaje = ''
+            mensaje = False
         libros = Libros.objects.all()
         lista = []
-        for x in xrange(1,51):
+        for x in xrange(1, 51):
             lista.append(x)
         genesis = Versiculos.objects.filter(libro=1,
                                             capitulo=1).order_by('versiculo')
@@ -179,6 +180,14 @@ class DirigirCulto(TemplateView):
             lista_versiculos.append(x.versiculo)
             if x.versiculo > aux:
                 aux = x.versiculo
+        start_date = now + timezone.timedelta(days=1)
+        end_date = now + timezone.timedelta(days=7)
+        cultos_proximos = Cultos.objects.filter(fecha__range=(start_date.date(), end_date.date()))
+        if now.weekday() == 6:
+            mensaje2 = False
+        else:
+            mensaje2 = True
+        mensaje2 = False
         return render_to_response(self.template_name, locals(),
                                   context_instance=RequestContext(request))
 
@@ -244,6 +253,8 @@ def buscar_versiculos_por_filtrado(request):
         versiculo.capitulo = request.GET['capitulo']
         versiculo.desde = request.GET['desde']
         versiculo.hasta = request.GET['hasta']
+        versiculo.todos = True
+        versiculo.fecha_modificado = timezone.now()
         versiculo.save()
     else:
         versiculo = VersiculoDelCulto(
@@ -251,7 +262,9 @@ def buscar_versiculos_por_filtrado(request):
             libro_id=request.GET['libro'],
             capitulo=request.GET['capitulo'],
             desde=request.GET['desde'],
-            hasta=request.GET['hasta']
+            hasta=request.GET['hasta'],
+            todos=True,
+            fecha_modificado=timezone.now()
         )
         versiculo.save()
     result = json.dumps(lista_versiculos, ensure_ascii=False)
@@ -297,7 +310,7 @@ def mensaje(request):
         dicc = {
             "id": x.id,
             'comentarios': x.comentario,
-            'fecha': x.fecha.strftime('%Y-%m-%d %H:%M'),
+            'fecha': x.fecha.strftime('%Y-%m-%d %H:%M:%S'),
         }
         if x.hermano.user.id == request.user.id:
             dicc['user'] = 1
@@ -319,5 +332,57 @@ def nuevo_mensaje(request):
     result = json.dumps("listo", ensure_ascii=False)
     return HttpResponse(result, content_type='application/json; charset=utf-8')
 
+
 def seleccionar_versiculo(request):
-    comentario = 
+    versiculo = VersiculoDelCulto.objects.filter(culto=request.GET['id_culto']).update(
+        selecionado_id=request.GET['id'],
+        todos=False,
+        fecha_modificado=timezone.now()
+    )
+    result = json.dumps("listo", ensure_ascii=False)
+    return HttpResponse(result, content_type='application/json; charset=utf-8')
+
+
+def espectador_de_culto(request):
+    culto = EstadoDelCulto.objects.get(culto=request.GET['culto'])
+    dicc = {'tipo': 0}
+    dicc2 = {}
+    lista = []
+    if culto.versiculos:
+        versiculo = VersiculoDelCulto.objects.get(culto=culto.culto)
+        dicc = {
+            'tipo': 1,
+            'libro': versiculo.libro.nombre,
+            'capitulo': versiculo.capitulo,
+            'desde': versiculo.desde,
+            'hasta': versiculo.hasta,
+            'fecha': versiculo.fecha_modificado.strftime('%Y-%m-%d %H:%M:%S'),
+        }
+        if versiculo.todos:
+            versiculos = Versiculos.objects.filter(libro=versiculo.libro, capitulo=versiculo.capitulo)
+            for x in versiculos:
+                if x.versiculo >= versiculo.desde and x.versiculo <= versiculo.hasta:
+                    dicc2 = {
+                        'id': x.id,
+                        'texto': x.texto,
+                        'versiculo': x.versiculo
+                    }
+                    lista.append(dicc2)
+            dicc['selecionados'] = lista
+        else:
+            dicc['selecionados'] = [
+                {
+                    'id': versiculo.selecionado.id,
+                    'texto': versiculo.selecionado.texto,
+                    'versiculo': versiculo.selecionado.versiculo
+                }
+            ]
+    elif culto.invitacion:
+        pass
+    elif culto.anuncio:
+        pass
+    elif culto.coros:
+        pass
+    result = json.dumps(dicc, ensure_ascii=False)
+    return HttpResponse(result, content_type='application/json; charset=utf-8')
+    

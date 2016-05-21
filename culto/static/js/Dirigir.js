@@ -34,6 +34,7 @@ function buscar_versiculos_por_capitulo(libro, capitulo, iflibro) {
   .fail(function() {
   })
   .always(function() {
+    add_evento();
   });
 }
 
@@ -43,7 +44,7 @@ function buscar_versiculos_por_filtrado() {
     type: 'GET',
     dataType: 'json',
     data: {libro: $('#libro').val(),
-    	   capitulo: $('#capitulo').val(),
+         capitulo: $('#capitulo').val(),
            desde: $('#Desde').val(),
            hasta: $('#Hasta').val(),
            id: $('#id_culto').val()
@@ -52,12 +53,13 @@ function buscar_versiculos_por_filtrado() {
   .done(function(data) {
     $('#contenido').empty();
     $.each(data, function(index, val) {
-      $('#contenido').append('<li class="list-group-item"><span class="badge">'+val.versiculo+'</span>'+val.texto+'</li>');
+      $('#contenido').append('<li class="list-group-item versiculos" data-id="'+val.id+'"><span class="badge">'+val.versiculo+'</span>'+val.texto+'</li>');
     });
   })
   .fail(function() {
   })
   .always(function() {
+    add_evento();
   });
 }
 

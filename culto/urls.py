@@ -34,4 +34,8 @@ urlpatterns = [
                    login_required(mensaje), name="mensaje"),
                url(r'^nuevo_mensaje/$',
                    login_required(nuevo_mensaje), name="nuevo_mensaje"),
+               url(r'^seleccionar_versiculo/$',
+                   login_required(seleccionar_versiculo), name="seleccionar_versiculo"),
+               url(r'^espectador_de_culto/$',
+                   espectador_de_culto, name="espectador_de_culto"),
               ]

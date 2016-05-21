@@ -4,6 +4,9 @@ Dirigir
 {% endblock %}
 {% load staticfiles %}
 {% block content %}
+{% if mensaje %}
+  <h1>No Eres Director De Este Culto</h1>
+{% else %}
 <input type="hidden" id="id_culto" value="{{pk}}">
 <div class="col-sm-12 col-md-8 col-xs-12">
 
@@ -78,13 +81,117 @@ Dirigir
         </div>
       </div>
     </div>
-    <div role="tabpanel" class="tab-pane fade" id="Invitar">...</div>
-    <div role="tabpanel" class="tab-pane fade" id="Coros">Proximamente</div>
-    <div role="tabpanel" class="tab-pane fade" id="Anuncios">...</div>
+    <div role="tabpanel" class="tab-pane fade" id="Invitar">
+      <h4>Direccion: {{cultos.0.Direccion.nombre}} {{cultos.0.Direccion.apellido}} <div class="pull-right"><input type="checkbox">Invitar </div></h4>
+      <h4>Lectura: {{cultos.0.lectura.nombre}} {{cultos.0.lectura.apellido}} <div class="pull-right"><input type="checkbox">Invitar </div></h4>
+      <h4>Recolecion: {{cultos.0.recolecion.nombre}} {{cultos.0.recolecion.apellido}} <div class="pull-right"><input type="checkbox">Invitar </div></h4>
+      <h4>Oracion: {{cultos.0.oracion.nombre}} {{cultos.0.oracion.apellido}} <div class="pull-right"><input type="checkbox">Invitar </div></h4>
+      <h4>Coros: {{cultos.0.coros.nombre}} {{cultos.0.coros.apellido}} <div class="pull-right"><input type="checkbox">Invitar </div></h4>
+      <h4>Predicacion: {{cultos.0.predicacion.nombre}} {{cultos.0.predicacion.apellido}} <div class="pull-right"><input type="checkbox">Invitar </div></h4>
+      <br>
+      <br>
+      <h4>Invitado Especial</h4>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="Nombre" class="col-sm-2 control-label">Nombre</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="Nombre" placeholder="Nombre del invitado">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="Motivo" class="col-sm-2 control-label">Motivo</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="Motivo" placeholder="Motivo de la Invitacion">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Invitar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="Coros">Proximamente
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="Anuncios">
+      {% if mensaje2 %}
+        Solo Los Domingos hay anuncios
+      {% else %}
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          {% for x in cultos_proximos %}
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingProximo_{{x.id}}">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseProximo_{{x.id}}" aria-expanded="false" aria-controls="collapseProximo_{{x.id}}">
+                  {{x.tipo.nombre}} - {{x.fecha}}
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseProximo_{{x.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingProximo_{{x.id}}">
+                <div class="panel-body">
+                  <div class="col-sm-12">
+                    <div class="col-sm-2" >
+                      <h4 class="pull-right">Direccion:</h4>
+                    </div>
+                    <div class="col-sm-10">
+                      <h4>{{x.Direccion.nombre}} {{x.Direccion.apellido}} <div class="pull-right"><input type="checkbox">Mostrar</div></h4>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="col-sm-2" >
+                      <h4 class="pull-right">Lectura:</h4>
+                    </div>
+                    <div class="col-sm-10">
+                      <h4>{{x.lectura.nombre}} {{x.lectura.apellido}} <div class="pull-right"><input type="checkbox">Mostrar</div></h4>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="col-sm-2" >
+                      <h4 class="pull-right">Recolecion:</h4>
+                    </div>
+                    <div class="col-sm-10">
+                      <h4>{{x.recolecion.nombre}} {{x.recolecion.apellido}} <div class="pull-right"><input type="checkbox">Mostrar</div></h4>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="col-sm-2" >
+                      <h4 class="pull-right">Oracion:</h4>
+                    </div>
+                    <div class="col-sm-10">
+                      <h4>{{x.oracion.nombre}} {{x.oracion.apellido}} <div class="pull-right"><input type="checkbox">Mostrar</div></h4>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="col-sm-2" >
+                      <h4 class="pull-right">Coros:</h4>
+                    </div>
+                    <div class="col-sm-10">
+                      <h4>{{x.coros.nombre}} {{x.coros.apellido}} <div class="pull-right"><input type="checkbox">Mostrar</div></h4>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="col-sm-2" >
+                      <h4 class="pull-right">Predicacion:</h4>
+                    </div>
+                    <div class="col-sm-10">
+                      <h4>{{x.predicacion.nombre}} {{x.predicacion.apellido}} <div class="pull-right"><input type="checkbox">Mostrar</div></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      
+      {% endif %}
+      
+    </div>
   </div>
 
 </div>
 {% include 'chat.html' %}
+{% endif %}
 
 
 {% endblock %}
