@@ -180,14 +180,18 @@ class DirigirCulto(TemplateView):
             lista_versiculos.append(x.versiculo)
             if x.versiculo > aux:
                 aux = x.versiculo
-        start_date = now + timezone.timedelta(days=1)
-        end_date = now + timezone.timedelta(days=7)
-        cultos_proximos = Cultos.objects.filter(fecha__range=(start_date.date(), end_date.date()))
         if now.weekday() == 6:
+            start_date = now + timezone.timedelta(days=1)
+            end_date = now + timezone.timedelta(days=7)
+            cultos_proximos = Cultos.objects.filter(
+                fecha__range=(start_date.date(), end_date.date())
+            )
+            eventos_proximos = Eventos.objects.filter(
+                fecha__range=(start_date.date(), end_date.date())
+            )
             mensaje2 = False
         else:
             mensaje2 = True
-        mensaje2 = False
         return render_to_response(self.template_name, locals(),
                                   context_instance=RequestContext(request))
 
