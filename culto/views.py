@@ -201,6 +201,14 @@ class DirigirCulto(TemplateView):
             fecha__range=(start_date.date(), end_date.date())
         )
         invitar = IvitacionDelCulto.objects.filter(culto=cultos)
+        if cultos[0].escuela_dominical is None:
+            cultos[0].dominical = False
+        else:
+            cultos[0].dominical = True
+        if cultos[0].escuela_de_nino is None:
+            cultos[0].nino = False
+        else:
+            cultos[0].nino = True
         for x in invitar:
             dicc_select = {
                 '1': True,

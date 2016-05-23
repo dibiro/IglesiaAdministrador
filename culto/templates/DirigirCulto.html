@@ -83,57 +83,57 @@ Dirigir
       </div>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="Invitar">
-      {% if not invitar.0.escuela_de_nino %}
+      {% if cultos.0.escuela_de_nino %}
         <h4>
-        <div class="col-sm-2"> Escuela De Niños: </div> 
+        <div class="col-sm-2"> Niños: </div> 
         <div class="col-sm-8"> {{cultos.0.escuela_de_nino.nombre}} {{cultos.0.escuela_de_nino.apellido}} </div>
         <div class="col-sm-2"><input {% if dicc_select.1 %}
-          disabled="disabled" 
+          disabled 
         {% endif %} type="checkbox" class="select_invitado" data-posicion="1"> Invitar </div></h4>
       {% endif %}
-      {% if not invitar.0.escuela_dominical %}
+      {% if cultos.0.escuela_dominical %}
         <h4>
-          <div class="col-sm-2"> Escuela Dominical: </div>
+          <div class="col-sm-2"> Dominical: </div>
           <div class="col-sm-8"> {{cultos.0.escuela_dominical.nombre}} {{cultos.0.escuela_dominical.apellido}} </div> 
           <div class="col-sm-2"><input {% if dicc_select.2 %}
-          disabled="disabled" 
+          disabled 
         {% endif %} type="checkbox" class="select_invitado" data-posicion="2"> Invitar </div></h4>
       {% endif %}
       <h4>
         <div class="col-sm-2"> Direccion: </div>
         <div class="col-sm-8"> {{cultos.0.Direccion.nombre}} {{cultos.0.Direccion.apellido}} </div>
         <div class="col-sm-2"><input {% if dicc_select.3 %}
-        disabled="disabled" 
+        disabled 
       {% endif %} type="checkbox" class="select_invitado" data-posicion="3"> Invitar </div></h4>
       <h4>
         <div class="col-sm-2"> Lectura: </div>
         <div class="col-sm-8"> {{cultos.0.lectura.nombre}} {{cultos.0.lectura.apellido}} </div>
         <div class="col-sm-2"><input {% if dicc_select.4 %}
-        disabled="disabled" 
+        disabled 
       {% endif %} type="checkbox" class="select_invitado" data-posicion="4"> Invitar </div></h4>
       <h4>
         <div class="col-sm-2"> Recolecion: </div>
         <div class="col-sm-8"> {{cultos.0.recolecion.nombre}} {{cultos.0.recolecion.apellido}} </div>
         <div class="col-sm-2"><input {% if dicc_select.5 %}
-        disabled="disabled" 
+        disabled 
       {% endif %} type="checkbox" class="select_invitado" data-posicion="5"> Invitar </div></h4>
       <h4>
         <div class="col-sm-2"> Oracion: </div>
         <div class="col-sm-8"> {{cultos.0.oracion.nombre}} {{cultos.0.oracion.apellido}} </div>
         <div class="col-sm-2"><input {% if dicc_select.6 %}
-        disabled="disabled" 
+        disabled 
       {% endif %} type="checkbox" class="select_invitado" data-posicion="6"> Invitar </div></h4>
       <h4>
         <div class="col-sm-2"> Coros: </div>
         <div class="col-sm-8"> {{cultos.0.coros.nombre}} {{cultos.0.coros.apellido}} </div>
         <div class="col-sm-2"><input {% if dicc_select.7 %}
-        disabled="disabled" 
+        disabled 
       {% endif %} type="checkbox" class="select_invitado" data-posicion="7"> Invitar </div></h4>
       <h4>
         <div class="col-sm-2"> Predicacion: </div>
         <div class="col-sm-8"> {{cultos.0.predicacion.nombre}} {{cultos.0.predicacion.apellido}} </div>
         <div class="col-sm-2"><input {% if dicc_select.8 %}
-        disabled="disabled" 
+        disabled 
       {% endif %} type="checkbox" class="select_invitado" data-posicion="8"> Invitar </div></h4>
       <br>
       <br>
@@ -180,6 +180,27 @@ Dirigir
               </div>
               <div id="collapseProximo_{{x.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingProximo_{{x.id}}">
                 <div class="panel-body">
+                  {% if x.escuela_de_nino %}
+                    
+                    <div class="col-sm-12">
+                      <div class="col-sm-2" >
+                        <h4 class="pull-right">Niños:</h4>
+                      </div>
+                      <div class="col-sm-10">
+                        <h4>{{x.escuela_de_nino.nombre}} {{x.escuela_de_nino.apellido}} <div class="pull-right"><input type="checkbox"> Mostrar</div></h4>
+                      </div>
+                    </div>
+                  {% endif %}
+                  {% if x.escuela_dominical %}
+                    <div class="col-sm-12">
+                      <div class="col-sm-2" >
+                        <h4 class="pull-right">Dominical:</h4>
+                      </div>
+                      <div class="col-sm-10">
+                        <h4>{{x.escuela_dominical.nombre}} {{x.escuela_dominical.apellido}} <div class="pull-right"><input type="checkbox"> Mostrar</div></h4>
+                      </div>
+                    </div>
+                  {% endif %}
                   <div class="col-sm-12">
                     <div class="col-sm-2" >
                       <h4 class="pull-right">Direccion:</h4>
