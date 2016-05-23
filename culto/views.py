@@ -38,10 +38,12 @@ def dicc_calendar(request):
         }
         for x in cultos:
             if x.fecha.day == dia.day:
-                dicc['class'] = 'success eventos" data-toggle="modal" data-target="#visulizar"'
+                dicc['class'] = 'success eventos" data-toggle="modal"'
+                dicc['class'] += 'data-target="#visulizar"'
         for x in eventos:
             if x.fecha.day == dia.day:
-                dicc['class'] = 'success eventos" data-toggle="modal" data-target="#visulizar"'
+                dicc['class'] = 'success eventos" data-toggle="modal"'
+                dicc['class'] += ' data-target="#visulizar"'
         dicc['weekday'] = dia.weekday()
         calendario.append(dicc)
     result = json.dumps(calendario, ensure_ascii=False)
@@ -79,6 +81,8 @@ def crear_culto(request):
         coros_id=request.POST['coros'],
         predicacion_id=request.POST['predicacion'],
         tipo_id=request.POST['tipo'],
+        escuela_dominical_id=request.POST['Escuela_dominical'],
+        escuela_de_nino_id=request.POST['Escuela_De_ninos'],
     )
     culto.save()
     estado = EstadoDelCulto(culto=culto)
@@ -102,6 +106,14 @@ def get_culto(request):
         'Predicacion': culto.predicacion.id,
         'tipos_de_cultos': culto.tipo.id,
     }
+    if culto.escuela_dominical is not None:
+        dicc['escuela_dominical'] = culto.escuela_dominical.id,
+    else:
+        dicc['escuela_dominical'] = '',
+    if culto.escuela_de_nino is not None:
+        dicc['escuela_de_nino'] = culto.escuela_de_nino.id,
+    else:
+        dicc['escuela_de_nino'] = '',
     result = json.dumps(dicc, ensure_ascii=False)
     return HttpResponse(result, content_type='application/json; charset=utf-8')
 
@@ -180,18 +192,44 @@ class DirigirCulto(TemplateView):
             lista_versiculos.append(x.versiculo)
             if x.versiculo > aux:
                 aux = x.versiculo
-        if now.weekday() == 6:
-            start_date = now + timezone.timedelta(days=1)
-            end_date = now + timezone.timedelta(days=7)
-            cultos_proximos = Cultos.objects.filter(
-                fecha__range=(start_date.date(), end_date.date())
-            )
-            eventos_proximos = Eventos.objects.filter(
-                fecha__range=(start_date.date(), end_date.date())
-            )
-            mensaje2 = False
-        else:
-            mensaje2 = True
+        start_date = now + timezone.timedelta(days=1)
+        end_date = now + timezone.timedelta(days=7)
+        cultos_proximos = Cultos.objects.filter(
+            fecha__range=(start_date.date(), end_date.date())
+        )
+        eventos_proximos = Eventos.objects.filter(
+            fecha__range=(start_date.date(), end_date.date())
+        )
+        invitar = IvitacionDelCulto.objects.filter(culto=cultos)
+        for x in invitar:
+            dicc_select = {
+                '1': True,
+                '2': True,
+                '3': True,
+                '4': True,
+                '5': True,
+                '6': True,
+                '7': True,
+                '8': True,
+            }
+            if x.escuela_dominical:
+                dicc_select['2'] = False
+            elif x.escuela_de_nino:
+                dicc_select['3'] = False
+            elif x.Direccion:
+                dicc_select['4'] = False
+            elif x.lectura:
+                dicc_select['5'] = False
+            elif x.recolecion:
+                dicc_select['6'] = False
+            elif x.oracion:
+                dicc_select['7'] = False
+            elif x.coros:
+                dicc_select['8'] = False
+            elif x.predicacion:
+                pass
+            else:
+                dicc_select['1'] = False
         return render_to_response(self.template_name, locals(),
                                   context_instance=RequestContext(request))
 
@@ -230,7 +268,8 @@ def buscar_versiculos_por_capitulo(request):
 
 def buscar_versiculos_por_filtrado(request):
     libro = Versiculos.objects.filter(libro=request.GET['libro'],
-                                      capitulo=request.GET['capitulo']).order_by('versiculo')
+                                      capitulo=request.GET['capitulo']
+                                      ).order_by('versiculo')
     aux = 0
     lista_versiculos = []
     dicc = {}
@@ -363,7 +402,8 @@ def espectador_de_culto(request):
             'fecha': versiculo.fecha_modificado.strftime('%Y-%m-%d %H:%M:%S'),
         }
         if versiculo.todos:
-            versiculos = Versiculos.objects.filter(libro=versiculo.libro, capitulo=versiculo.capitulo)
+            versiculos = Versiculos.objects.filter(libro=versiculo.libro,
+                                                   capitulo=versiculo.capitulo)
             for x in versiculos:
                 if x.versiculo >= versiculo.desde and x.versiculo <= versiculo.hasta:
                     dicc2 = {
@@ -389,4 +429,41 @@ def espectador_de_culto(request):
         pass
     result = json.dumps(dicc, ensure_ascii=False)
     return HttpResponse(result, content_type='application/json; charset=utf-8')
-    
+
+
+def invitar_culto(request):
+    target = request.GET['target']
+    estado = EstadoDelCulto.objects.get(culto=request.GET['id_culto'])
+    estado.versiculos = False
+    estado.invitacion = True
+    estado.anuncio = False
+    estado.coros = False
+    estado.save()
+    estado = IvitacionDelCulto.objects.get(culto=request.GET['id_culto'])
+    estado.escuela_de_nino = False
+    estado.escuela_dominical = False
+    estado.Direccion = False
+    estado.lectura = False
+    estado.recolecion = False
+    estado.oracion = False
+    estado.coros = False
+    estado.predicacion = False
+    if request.GET['target'] == '1':
+        estado.escuela_de_nino = True
+    elif request.GET['target'] == '2':
+        estado.escuela_dominical = True
+    elif request.GET['target'] == '3':
+        estado.Direccion = True
+    elif request.GET['target'] == '4':
+        estado.lectura = True
+    elif request.GET['target'] == '5':
+        estado.recolecion = True
+    elif request.GET['target'] == '6':
+        estado.oracion = True
+    elif request.GET['target'] == '7':
+        estado.coros = True
+    elif request.GET['target'] == '8':
+        estado.predicacion = True
+    estado.save()
+    result = json.dumps(target, ensure_ascii=False)
+    return HttpResponse(result, content_type='application/json; charset=utf-8')

@@ -71,6 +71,7 @@ Dirigir
         </div>
         <div class="col-sm-12 col-xs-12 col-md-6" id="contenedor" style="overflow:auto;">
           <ul class="list-group" id="contenido">
+      <div class="col-sm-12">
             {% for x in genesis %}
               <li class="list-group-item">
                 <span class="badge">{{x.versiculo}}</span>
@@ -82,35 +83,84 @@ Dirigir
       </div>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="Invitar">
-      <h4>Direccion: {{cultos.0.Direccion.nombre}} {{cultos.0.Direccion.apellido}} <div class="pull-right"><input type="checkbox"> Invitar </div></h4>
-      <h4>Lectura: {{cultos.0.lectura.nombre}} {{cultos.0.lectura.apellido}} <div class="pull-right"><input type="checkbox"> Invitar </div></h4>
-      <h4>Recolecion: {{cultos.0.recolecion.nombre}} {{cultos.0.recolecion.apellido}} <div class="pull-right"><input type="checkbox"> Invitar </div></h4>
-      <h4>Oracion: {{cultos.0.oracion.nombre}} {{cultos.0.oracion.apellido}} <div class="pull-right"><input type="checkbox"> Invitar </div></h4>
-      <h4>Coros: {{cultos.0.coros.nombre}} {{cultos.0.coros.apellido}} <div class="pull-right"><input type="checkbox"> Invitar </div></h4>
-      <h4>Predicacion: {{cultos.0.predicacion.nombre}} {{cultos.0.predicacion.apellido}} <div class="pull-right"><input type="checkbox"> Invitar </div></h4>
+      {% if not invitar.0.escuela_de_nino %}
+        <h4>
+        <div class="col-sm-2"> Escuela De Niños: </div> 
+        <div class="col-sm-8"> {{cultos.0.escuela_de_nino.nombre}} {{cultos.0.escuela_de_nino.apellido}} </div>
+        <div class="col-sm-2"><input {% if dicc_select.1 %}
+          disabled="disabled" 
+        {% endif %} type="checkbox" class="select_invitado" data-posicion="1"> Invitar </div></h4>
+      {% endif %}
+      {% if not invitar.0.escuela_dominical %}
+        <h4>
+          <div class="col-sm-2"> Escuela Dominical: </div>
+          <div class="col-sm-8"> {{cultos.0.escuela_dominical.nombre}} {{cultos.0.escuela_dominical.apellido}} </div> 
+          <div class="col-sm-2"><input {% if dicc_select.2 %}
+          disabled="disabled" 
+        {% endif %} type="checkbox" class="select_invitado" data-posicion="2"> Invitar </div></h4>
+      {% endif %}
+      <h4>
+        <div class="col-sm-2"> Direccion: </div>
+        <div class="col-sm-8"> {{cultos.0.Direccion.nombre}} {{cultos.0.Direccion.apellido}} </div>
+        <div class="col-sm-2"><input {% if dicc_select.3 %}
+        disabled="disabled" 
+      {% endif %} type="checkbox" class="select_invitado" data-posicion="3"> Invitar </div></h4>
+      <h4>
+        <div class="col-sm-2"> Lectura: </div>
+        <div class="col-sm-8"> {{cultos.0.lectura.nombre}} {{cultos.0.lectura.apellido}} </div>
+        <div class="col-sm-2"><input {% if dicc_select.4 %}
+        disabled="disabled" 
+      {% endif %} type="checkbox" class="select_invitado" data-posicion="4"> Invitar </div></h4>
+      <h4>
+        <div class="col-sm-2"> Recolecion: </div>
+        <div class="col-sm-8"> {{cultos.0.recolecion.nombre}} {{cultos.0.recolecion.apellido}} </div>
+        <div class="col-sm-2"><input {% if dicc_select.5 %}
+        disabled="disabled" 
+      {% endif %} type="checkbox" class="select_invitado" data-posicion="5"> Invitar </div></h4>
+      <h4>
+        <div class="col-sm-2"> Oracion: </div>
+        <div class="col-sm-8"> {{cultos.0.oracion.nombre}} {{cultos.0.oracion.apellido}} </div>
+        <div class="col-sm-2"><input {% if dicc_select.6 %}
+        disabled="disabled" 
+      {% endif %} type="checkbox" class="select_invitado" data-posicion="6"> Invitar </div></h4>
+      <h4>
+        <div class="col-sm-2"> Coros: </div>
+        <div class="col-sm-8"> {{cultos.0.coros.nombre}} {{cultos.0.coros.apellido}} </div>
+        <div class="col-sm-2"><input {% if dicc_select.7 %}
+        disabled="disabled" 
+      {% endif %} type="checkbox" class="select_invitado" data-posicion="7"> Invitar </div></h4>
+      <h4>
+        <div class="col-sm-2"> Predicacion: </div>
+        <div class="col-sm-8"> {{cultos.0.predicacion.nombre}} {{cultos.0.predicacion.apellido}} </div>
+        <div class="col-sm-2"><input {% if dicc_select.8 %}
+        disabled="disabled" 
+      {% endif %} type="checkbox" class="select_invitado" data-posicion="8"> Invitar </div></h4>
       <br>
       <br>
-      <h4>Invitado Especial</h4>
-      <form class="form-horizontal">
-        <div class="form-group">
-          <label for="Nombre" class="col-sm-2 control-label">Nombre</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="Nombre" placeholder="Nombre del invitado">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="Motivo" class="col-sm-2 control-label">Motivo</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="Motivo" placeholder="Motivo de la Invitacion">
-          </div>
-        </div>
+      <div class="col-sm-12">
         
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Invitar</button>
+        <h4>Invitado Especial</h4>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="Nombre" class="col-sm-2 control-label">Nombre</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="Nombre" placeholder="Nombre del invitado">
+            </div>
           </div>
-        </div>
-      </form>
+          <div class="form-group">
+            <label for="Motivo" class="col-sm-2 control-label">Motivo</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="Motivo" placeholder="Motivo de la Invitacion">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Invitar</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="Coros">Proximamente
     </div>

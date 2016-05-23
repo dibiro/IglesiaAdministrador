@@ -98,8 +98,34 @@ function seleccionar_versiculo(id) {
   });
 }
 
+function invitar_culto(target) {
+  $.ajax({
+    url: '/Culto/invitar/',
+    type: 'GET',
+    dataType: 'json',
+    data: {target: target, id_culto: $('#id_culto').val()},
+  })
+  .done(function(data) {
+    $.each($(".select_invitado"), function(index, val) {
+      if (index==data) {
+        $(this).prop('disabled', false)
+      }else {
+        $(this).prop('disabled', true)
+      }
+    });
+  })
+  .fail(function() {
+  })
+  .always(function() {
+  });
+}
+
 function add_evento() {
   $('.versiculos').click(function(event) {
     seleccionar_versiculo($(this).data('id'))
   });
 }
+
+$(".select_invitado").on('click', function(event) {
+  invitar_culto($(this).data('posicion'))
+});

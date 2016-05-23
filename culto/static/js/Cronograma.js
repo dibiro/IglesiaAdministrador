@@ -87,6 +87,8 @@ function crear_culto() {
         'coros': $("#Coros").val(),
         'predicacion': $("#Predicacion").val(),
         'tipo': $("#tipos_de_cultos").val(),
+        'Escuela_De_ninos': $("#Escuela_De_ninos").val(),
+        'Escuela_dominical': $("#Escuela_dominical").val(),
     },
     beforeSend: function(xhr) {xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));},
   })
@@ -111,13 +113,6 @@ function get_culto(id) {
   .done(function(data) {
     $("#id_culto").val(data.id);
     $("#Modificar_Fecha").val(data.Fecha);
-    $("#Modificar_Direccion").select2('val', data.Direccion);
-    $("#Modificar_Lectura").select2('val', data.Lectura);
-    $("#Modificar_Recolecion").select2('val', data.Recolecion);
-    $("#Modificar_Oracion").select2('val', data.Oracion);
-    $("#Modificar_Coros").select2('val', data.Coros);
-    $("#Modificar_Predicacion").select2('val', data.Predicacion);
-    $("#Modificar_tipos_de_cultos").select2('val', data.tipos_de_cultos);
     $("#Modificar_Direccion").val(data.Direccion);
     $("#Modificar_Lectura").val(data.Lectura);
     $("#Modificar_Recolecion").val(data.Recolecion);
@@ -125,10 +120,13 @@ function get_culto(id) {
     $("#Modificar_Coros").val(data.Coros);
     $("#Modificar_Predicacion").val(data.Predicacion);
     $("#Modificar_tipos_de_cultos").val(data.tipos_de_cultos);
+    $("#Modificar_Escuela_De_ninos").val(data.escuela_de_nino);
+    $("#Modificar_Escuela_dominical").val(data.escuela_dominical);
   })
   .fail(function() {
   })
   .always(function() {
+    $("select").select2();
   });
 }
 

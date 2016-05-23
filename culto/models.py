@@ -16,6 +16,14 @@ class TipoDeCulto(models.Model):
 
 class Cultos(models.Model):
     fecha = models.DateField()
+    escuela_dominical = models.ForeignKey(Hermanos,
+                                          related_name="escuela_dominical",
+                                          blank=True,
+                                          null=True)
+    escuela_de_nino = models.ForeignKey(Hermanos,
+                                        related_name="escuela_de_ninos",
+                                        blank=True,
+                                        null=True)
     Direccion = models.ForeignKey(Hermanos, related_name="Direccion")
     lectura = models.ForeignKey(Hermanos, related_name="lectura")
     recolecion = models.ForeignKey(Hermanos, related_name="recolecion")
@@ -97,6 +105,8 @@ class IvitacionDelCulto(models.Model):
     oracion = models.BooleanField(default=False)
     coros = models.BooleanField(default=False)
     predicacion = models.BooleanField(default=False)
+    escuela_dominical = models.BooleanField(default=False)
+    escuela_de_nino = models.BooleanField(default=False)
     fecha_modificado = models.DateTimeField(auto_now=True)
 
     class Meta:
